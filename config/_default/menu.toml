@@ -1,0 +1,158 @@
+# [[main]]
+#   identifier = "home"
+#   pre = '<i class="fas fa-home"></i>'
+#   weight = 1
+#   url = "https://hbs.razonyang.com/"
+# [[main]]
+#   identifier = "blog"
+#   name = "Blog"
+#   weight = 2
+#   url = "https://hbs.razonyang.com/blog/"
+# [[main]]
+#   name = "Support"
+#   identifier = "support"
+#   weight = 40
+# [[main]]
+#   name = "Repository"
+#   identifier = "repository"
+#   parent = "support"
+#   url = "https://github.com/razonyang/hugo-theme-bootstrap"
+#   weight = 1
+# [[main]]
+#   name = "Discussions"
+#   identifier = "discussions"
+#   parent = "support"
+#   url = "https://github.com/razonyang/hugo-theme-bootstrap/discussions/new"
+#   weight = 2
+# [[main]]
+#   name = "Features Request"
+#   identifier = "feature-request"
+#   parent = "support"
+#   url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=feature_request.md"
+#   weight = 3
+# [[main]]
+#   parent = "support"
+#   weight = 4
+#   [main.params]
+#     divider = true
+# [[main]]
+#   identifier = "docs"
+#   name = "Docs"
+#   weight = 100
+# [[main]]
+#   parent = "docs"
+#   name = "Latest(v1)"
+#   url = "https://hbs.razonyang.com/v1/"
+#   weight = 1
+# [[main]]
+#   parent = "docs"
+#   name = "v0"
+#   url = "https://hbs.razonyang.com/v0/"
+#   weight = 100
+# [[main]]
+#   identifier = "donate"
+#   name = "Donate"
+#   weight = 99
+# [[main]]
+#   parent = "donate"
+#   name = "Open Collective"
+#   url = "https://opencollective.com/hbs"
+#   weight = 1
+# [[main]]
+#   parent = "donate"
+#   name = "Paypal"
+#   url = "https://paypal.me/razonyang"
+#   pre = '<i class="fab fa-fw fa-paypal me-1"></i>'
+#   weight = 2
+# [[main]]
+#   parent = "donate"
+#   name = "Alipay"
+#   url = "https://raw.githubusercontent.com/razonyang/blog/main/static/images/reward/alipay.webp"
+#   pre = '<i class="fab fa-fw fa-alipay me-1"></i>'
+#   weight = 3
+# [[main]]
+#   parent = "donate"
+#   name = "WeChat"
+#   url = "https://raw.githubusercontent.com/razonyang/blog/main/static/images/reward/wechat.webp"
+#   pre = '<i class="fab fa-fw fa-weixin me-1"></i>'
+#   weight = 4
+
+[[main]]
+  identifier = "posts"
+  pre = '<i class="fas fa-book fa-fw"></i>'
+  name = "文章"
+  weight = 1
+  url = "/posts/"
+
+[[main]]
+  identifier = "series"
+  pre = '<i class="fas fa-bars fa-fw"></i>'
+  name = "專欄"
+  weight = 2
+  url = "/series/"
+
+[[main]]
+  identifier = "notes"
+  pre = '<i class="fas fa-sticky-note fa-fw"></i>'
+  name = "隨手筆記"
+  weight = 100
+  url = "/posts/notes/"
+
+
+# [[footer]]
+#   name = "Support"
+#   identifier = "support"
+#   weight = 1
+# [[footer]]
+#   name = "Repository"
+#   identifier = "repository"
+#   parent = "support"
+#   url = "https://github.com/razonyang/hugo-theme-bootstrap"
+#   weight = 1
+#   pre = '<i class="fab fa-fw fa-github me-1"></i>'
+# [[footer]]
+#   name = "Discussions"
+#   identifier = "discussions"
+#   parent = "support"
+#   url = "https://github.com/razonyang/hugo-theme-bootstrap/discussions/new"
+#   weight = 2
+#   pre = '<i class="fas fa-fw fa-comments me-1"></i>'
+# [[footer]]
+#   name = "Features Request"
+#   identifier = "feature-request"
+#   parent = "support"
+#   url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=feature_request.md"
+#   weight = 3
+# [[footer]]
+#   name = "Bug Report"
+#   identifier = "bug-report"
+#   parent = "support"
+#   url = "https://github.com/razonyang/hugo-theme-bootstrap/issues/new?template=bug_report.md"
+#   weight = 4
+#
+# [[footer]]
+#   name = "Docs"
+#   identifier = "docs"
+#   weight = 2
+#
+# [[footer]]
+#   name = "Features"
+#   identifier = "features"
+#   weight = 3
+#
+# [[footer]]
+#   identifier = "demo"
+#   name = "Demo"
+#   weight = 4
+# [[footer]]
+#   identifier = "demo-netlify"
+#   parent = "demo"
+#   name = "Netlify"
+#   weight = 1
+#   url = "https://hbs.razonyang.com"
+# [[footer]]
+#   identifier = "demo-china"
+#   parent = "demo"
+#   name = "China"
+#   weight = 2
+#   url = "https://hbs-cn.razonyang.com"

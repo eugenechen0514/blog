@@ -1,0 +1,20 @@
+name = "EugeneChen"
+# avatar = "images/profile.png" # Avatar image. Default to "images/profile.webp".
+bio = "軟體工程師，喜歡動手做些有的沒的專案，同時也喜愛數學、攝影、桌球，慢跑、游泳、作菜。"
+company = 'Company'
+# company = '<a href="https://example.com" target="_blank" rel="noopener noreferrer">Company</a>'
+#location = "Earth"
+# alternatives:
+# location = "<a href='https://www.openstreetmap.org/search?query=Earth'>Earth</a>"
+# location = "<a href='https://www.google.com/maps/search/Earth'>Earth</a>"
+about = "https://eugene-website.herokuapp.com" # The external about page. The internal about page will be used if not set.
+
+[params]
+  #layout = "compact"
+
+[social]
+  email = "yujiechen0514@gmail.com"
+  #facebook = "yourfacebookusername"
+  github = "eugenechen0514"
+  #twitter = "yourtwitterusername"
+  # rss = "" # Disable RSS link

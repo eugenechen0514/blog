@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Series on EugeneChen</title>
+    <title>用js成為老闆心中的全端工程師 - 2019 iT邦幫忙鐵人賽 on EugeneChen</title>
     <link>/series/</link>
-    <description>Recent content in Series on EugeneChen</description>
+    <description>Recent content in 用js成為老闆心中的全端工程師 - 2019 iT邦幫忙鐵人賽 on EugeneChen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>Copyright © 2016-{year} EugeneChen. All Rights Reserved.</copyright>
     <lastBuildDate>Tue, 30 Oct 2018 00:00:00 +0000</lastBuildDate><atom:link href="/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Day 30- 三周目 - Docker network 暨完賽回顧</title>
-      <link>/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/</link>
+      <title>用js成為老闆心中的全端工程師 - 2019 iT邦幫忙鐵人賽</title>
+      <link>/series/2019-ithome-ironman/</link>
       <pubDate>Tue, 30 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/</guid>
-      <description>&lt;p&gt;介紹 Docker Network mode 和三十天的回顧&lt;/p&gt;</description>
+      <guid>/series/2019-ithome-ironman/</guid>
+      <description>test content</description>
+    </item>
+    
+  </channel>
+</rss>
+ocker Network mode 和三十天的回顧&lt;/p&gt;</description>
     </item>
     
     <item>

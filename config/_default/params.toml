@@ -5,7 +5,7 @@ mainSections = ['posts', 'series', 'notes']
 # titleSeparator = "|" # Title separator. Default to "-".
 
 description = "An extreme fast, responsive and feature-rich blog theme for Hugo"
-keywords = "Hugo, Bootstrap, Blog Theme"
+keywords = "EugeneChen, eugenechen, eugene"
 # images = ["site-feature-image.jpg"]
 
 # metaRobots = "noindex, nofollow" # Default value for Meta Tag "robots"
@@ -115,18 +115,18 @@ viewer = true # Image Viewer
   shenma = ""
 
 [creativeCommons]
-  # by = true # Credit must be given to you, the creator.
-  # nc = true # Only noncommercial use of your work is permitted.
-  # nd = true # No derivatives or adaptations of your work are permitted.
-  # sa = true # Adaptations must be shared under the same terms.
+  by = true # Credit must be given to you, the creator.
+  nc = true # Only noncommercial use of your work is permitted.
+  nd = false # No derivatives or adaptations of your work are permitted.
+  sa = true # Adaptations must be shared under the same terms.
 
 [utterances]
-  repo = "razonyang/hugo-theme-bootstrap-comments" # Replace with your repository.
-  #issueTerm = "pathname" # pathname, url, title, og:title
-  #label = "comment"
+  repo = "eugenechen0514/eugenechen0514.github.io" # Replace with your repository.
+  issueTerm = "pathname" # pathname, url, title, og:title
+  label = "comment"
   # By default, light and dark mode correspond to github-light and github-dark, respectively.
   # Optional values: github-light, github-dark, preferred-color-scheme, github-dark-orange, icy-dark, dark-blue, photon-dark.
-  #theme = "" 
+  theme = "github-light"
 
 [search]
   paginate = 5 # Pagination. Default to 10.
@@ -149,9 +149,9 @@ viewer = true # Image Viewer
 #  indexName = "razonyang"
 #  # debug = true
 
-[reward]
-  alipay = "images/reward/alipay.png"
-  wechat = "images/reward/wechat.png"
+# [reward]
+#   alipay = "images/reward/alipay.png"
+#   wechat = "images/reward/wechat.png"
   #paypal = "images/reward/paypal.png"
   #patreon = "images/reward/patreon.png"
   #liberapay = "images/reward/liberapay.png"
@@ -185,26 +185,26 @@ viewer = true # Image Viewer
     #   sizes = "144x144"
     #   src = "/images/icons/icon-144x144.png"
 
-[contact]
-  endpoint = "https://getform.io/f/56041c81-9e03-4c24-b9c5-61238854d4cd" # Backend endpoint, remove this line if you're using Netlify.
+# [contact]
+#   endpoint = "https://getform.io/f/ec1d52bb-8523-483c-a0c8-787b80f71111" # Backend endpoint, remove this line if you're using Netlify.
   # file = true # Enable file upload
   # fileField = "image" # The name of file field.
-  [contact.reCaptcha]
-    siteKey = "6LcWQH0gAAAAAJPZN9S-wrugRUukNOiHfxmFOSM5"
+#   [contact.reCaptcha]
+#     siteKey = "6LcWQH0gAAAAAJPZN9S-wrugRUukNOiHfxmFOSM5"
 
-[repo]
-  url = "https://github.com/razonyang/hugo-theme-bootstrap"
+# [repo]
+#   url = "https://github.com/razonyang/hugo-theme-bootstrap"
   # branch = "main"
-  subPath = "exampleSite"
+#   subPath = "exampleSite"
   # dateFormat = "02/01/2006, 15:04:05 PM"
 
 [fullWidthInSections]
   # docs = true
 
-[topAppBar]
-  [topAppBar.social]
-    github = "razonyang/hugo-theme-bootstrap"
-    # rss = "" # Disable RSS link
+# [topAppBar]
+#   [topAppBar.social]
+#     github = "eugenechen0514/eugenechen0514.github.io"
+#     # rss = "" # Disable RSS link
 
 [docs]
   [docs.nav]

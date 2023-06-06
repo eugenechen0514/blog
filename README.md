@@ -1,4 +1,8 @@
 
+# dev
+```shell
+hugo server --disableFastRender
+```
 
 # init
 ```shell

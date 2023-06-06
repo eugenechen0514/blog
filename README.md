@@ -13,6 +13,11 @@ git push origin gh-pages
 git checkout master
 ```
 
+# build
+```shell
+hugo
+```
+
 # deploy
 ```shell
 cd public

@@ -1,4 +1,4 @@
-baseURL = "https://eugenechen0514.github.io/blog"
+baseURL = "/blog"
 title = "EugeneChen"
 theme = "hugo-theme-bootstrap" # install via git submodule
 # theme = "github.com/razonyang/hugo-theme-bootstrap" # install via hugo module

@@ -24,7 +24,6 @@ cd public
 git add .
 git commit -m "update public"
 git push --force origin gh-pages
-
-
+cd ..
 ```
 

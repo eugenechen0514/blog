@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Day 23 - 二周目 - Redux 串接 React 與 Redux DevTools - EugeneChen</title><link rel="apple-touch-icon" href="/images/icons/icon-180x180.png" sizes="180x180">
-<link rel="icon" href="/images/icons/icon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/images/icons/icon-16x16.png" sizes="16x16" type="image/png">
-<link rel="icon" href="/images/icons/favicon.ico">
-<link rel="manifest" href="/manifest.json">
+    <title>Day 23 - 二周目 - Redux 串接 React 與 Redux DevTools - EugeneChen</title><link rel="apple-touch-icon" href="https://eugenechen0514.github.io/blog/images/icons/icon-180x180.png" sizes="180x180">
+<link rel="icon" href="https://eugenechen0514.github.io/blog/images/icons/icon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://eugenechen0514.github.io/blog/images/icons/icon-16x16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://eugenechen0514.github.io/blog/images/icons/favicon.ico">
+<link rel="manifest" href="https://eugenechen0514.github.io/blog/manifest.json">
 <meta name="keywords" content="" />
 <meta name="description" content="實作 Redux 與 React 的串接" /><meta name="robots" content="index, follow" /><meta itemprop="name" content="Day 23 - 二周目 - Redux 串接 React 與 Redux DevTools">
 <meta itemprop="description" content="實作 Redux 與 React 的串接"><meta itemprop="datePublished" content="2018-10-23T00:00:00+00:00" />
@@ -17,18 +17,18 @@
 <meta itemprop="keywords" content="2019 iT 邦幫忙鐵人賽,用js成為老闆心中的全端工程師," /><meta property="og:title" content="Day 23 - 二周目 - Redux 串接 React 與 Redux DevTools" />
 <meta property="og:description" content="實作 Redux 與 React 的串接" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/" /><meta property="article:section" content="series" />
+<meta property="og:url" content="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/" /><meta property="article:section" content="series" />
 <meta property="article:published_time" content="2018-10-23T00:00:00+00:00" />
 <meta property="article:modified_time" content="2018-10-23T00:00:00+00:00" /><meta property="og:site_name" content="EugeneChen" />
-<meta property="og:see_also" content="/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/" /><meta property="og:see_also" content="/series/2019-ithome-ironman/day-29-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-compose%E4%B8%80%E6%AC%A1%E7%AE%A1%E7%90%86%E5%A4%9A%E5%80%8B%E5%AE%B9%E5%99%A8/" /><meta property="og:see_also" content="/series/2019-ithome-ironman/day-28-%E4%B8%89%E5%91%A8%E7%9B%AE-%E8%A3%BD%E4%BD%9C%E8%87%AA%E5%B7%B1%E7%9A%84%E6%98%A0%E5%83%8F%E6%AA%94%E5%8C%85%E6%89%93%E5%89%8D%E5%BE%8C%E7%AB%AF%E6%98%A0%E5%83%8F%E6%AA%94/" /><meta property="og:see_also" content="/series/2019-ithome-ironman/day-27-%E4%B8%89%E5%91%A8%E7%9B%AE-%E4%BA%94%E5%88%86%E9%90%98%E5%BB%BA%E7%AB%8B%E7%A7%81%E6%9C%89-npm-verdaccio/" /><meta property="og:see_also" content="/series/2019-ithome-ironman/day-26-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E7%9C%8B%E5%AE%8C%E5%B0%B1%E6%9C%83%E6%9E%B6-docker-%E5%8C%96%E7%9A%84%E6%9C%8D%E5%8B%99/" /><meta property="og:see_also" content="/series/2019-ithome-ironman/day-25-%E4%BA%8C%E5%91%A8%E7%9B%AE-react-component-%E5%A5%97%E4%BB%B6-material-ui-google-material-design-%E7%9A%84%E5%AF%A6%E4%BD%9C%E5%A5%97%E4%BB%B6/" />
+<meta property="og:see_also" content="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/" /><meta property="og:see_also" content="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-29-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-compose%E4%B8%80%E6%AC%A1%E7%AE%A1%E7%90%86%E5%A4%9A%E5%80%8B%E5%AE%B9%E5%99%A8/" /><meta property="og:see_also" content="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-28-%E4%B8%89%E5%91%A8%E7%9B%AE-%E8%A3%BD%E4%BD%9C%E8%87%AA%E5%B7%B1%E7%9A%84%E6%98%A0%E5%83%8F%E6%AA%94%E5%8C%85%E6%89%93%E5%89%8D%E5%BE%8C%E7%AB%AF%E6%98%A0%E5%83%8F%E6%AA%94/" /><meta property="og:see_also" content="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-27-%E4%B8%89%E5%91%A8%E7%9B%AE-%E4%BA%94%E5%88%86%E9%90%98%E5%BB%BA%E7%AB%8B%E7%A7%81%E6%9C%89-npm-verdaccio/" /><meta property="og:see_also" content="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-26-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E7%9C%8B%E5%AE%8C%E5%B0%B1%E6%9C%83%E6%9E%B6-docker-%E5%8C%96%E7%9A%84%E6%9C%8D%E5%8B%99/" /><meta property="og:see_also" content="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-25-%E4%BA%8C%E5%91%A8%E7%9B%AE-react-component-%E5%A5%97%E4%BB%B6-material-ui-google-material-design-%E7%9A%84%E5%AF%A6%E4%BD%9C%E5%A5%97%E4%BB%B6/" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Day 23 - 二周目 - Redux 串接 React 與 Redux DevTools"/>
 <meta name="twitter:description" content="實作 Redux 與 React 的串接"/>
-<meta property="og:image" content="/images/logo.png"/>
-  <meta name="twitter:image" content="/images/logo.png"/><link rel="stylesheet" href="/assets/main/bundle.min.925f59d4c744cc5e99dcc7d02a6f68dff5cceaea488c7667bd947bf7aa35b649.css" integrity="sha256-kl9Z1MdEzF6Z3MfQKm9o3/XM6upIjHZnvZR796o1tkk=" crossorigin="anonymous"><link rel="stylesheet" href="/assets/viewer/bundle.min.f05183267bb952fbc8c63a7178364de2951614ab71d544ec1068ad36c7447ccc.css" integrity="sha256-8FGDJnu5UvvIxjpxeDZN4pUWFKtx1UTsEGitNsdEfMw=" crossorigin="anonymous"><link rel="stylesheet" href="/assets/docsearch/bundle.min.c165d6a127fffa285e6b89ef65362fe921bc0c1fdaefa35f6af069b962bdb50e.css" integrity="sha256-wWXWoSf/&#43;ihea4nvZTYv6SG8DB/a76NfavBpuWK9tQ4=" crossorigin="anonymous"></head>
-  <body><script>const items=["theme","palette"];items.forEach(function(e){const t=localStorage.getItem("hbs:"+e);t&&document.body.parentElement.setAttribute("data-"+e,t)})</script><header><nav class="top-app-bar shadow bg-primary text-white navbar navbar-expand-lg fixed-top">
-  <div class="container"><a class="navbar-brand flex-grow-1 flex-lg-grow-0 text-lg-start ms-2 ms-lg-0 mx-auto me-lg-3" href="/"><picture><img class="logo" alt="Logo" src="/images/logo.webp" loading="lazy"
+<meta property="og:image" content="https://eugenechen0514.github.io/blog/images/logo.png"/>
+  <meta name="twitter:image" content="https://eugenechen0514.github.io/blog/images/logo.png"/><link rel="stylesheet" href="https://eugenechen0514.github.io/blog/assets/main/bundle.min.925f59d4c744cc5e99dcc7d02a6f68dff5cceaea488c7667bd947bf7aa35b649.css" integrity="sha256-kl9Z1MdEzF6Z3MfQKm9o3/XM6upIjHZnvZR796o1tkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://eugenechen0514.github.io/blog/assets/viewer/bundle.min.f05183267bb952fbc8c63a7178364de2951614ab71d544ec1068ad36c7447ccc.css" integrity="sha256-8FGDJnu5UvvIxjpxeDZN4pUWFKtx1UTsEGitNsdEfMw=" crossorigin="anonymous"><link rel="stylesheet" href="https://eugenechen0514.github.io/blog/assets/docsearch/bundle.min.c165d6a127fffa285e6b89ef65362fe921bc0c1fdaefa35f6af069b962bdb50e.css" integrity="sha256-wWXWoSf/&#43;ihea4nvZTYv6SG8DB/a76NfavBpuWK9tQ4=" crossorigin="anonymous"></head>
+  <body><script>const items=["theme","palette"];items.forEach(function(e){const t=localStorage.getItem("hbs:blog:"+e);t&&document.body.parentElement.setAttribute("data-"+e,t)})</script><header><nav class="top-app-bar shadow bg-primary text-white navbar navbar-expand-lg fixed-top">
+  <div class="container"><a class="navbar-brand flex-grow-1 flex-lg-grow-0 text-lg-start ms-2 ms-lg-0 mx-auto me-lg-3" href="https://eugenechen0514.github.io/blog"><picture><img class="logo" alt="Logo" src="https://eugenechen0514.github.io/blog/images/logo.webp" loading="lazy"
     
      width="136" height="69"
      />
@@ -47,20 +47,20 @@ EugeneChen
       <div class="offcanvas-body p-4 pt-0 p-lg-0">
         <hr class="d-lg-none">
         <ul class="navbar-nav flex-row flex-wrap align-items-center me-auto"><li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="/posts/">
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://eugenechen0514.github.io/blog/posts/">
               <i class="fas fa-book fa-fw"></i>文章
             </a>
           </li><li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="/series/">
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://eugenechen0514.github.io/blog/series/">
               <i class="fas fa-bars fa-fw"></i>專欄
             </a>
           </li><li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="/posts/notes/">
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://eugenechen0514.github.io/blog/posts/notes/">
               <i class="fas fa-sticky-note fa-fw"></i>隨手筆記
             </a>
           </li></ul>
         <hr class="d-lg-none">
-        <form class="search-bar mx-auto my-1" action="/search" novalidate>
+        <form class="search-bar mx-auto my-1" action="https://eugenechen0514.github.io/blog/search" novalidate>
   <div class="input-group input-group-sm align-items-center">
     <span class="btn btn-search disabled position-absolute left-0 border-0">
       <i class="fas fa-fw fa-search fa-lg"></i>
@@ -75,11 +75,11 @@ EugeneChen
         <span class="d-lg-none">語言</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown"><li>
-        <a class="dropdown-item" href="/en/">
+        <a class="dropdown-item" href="https://eugenechen0514.github.io/blog/en/">
             English
         </a>
         </li><li>
-        <a class="dropdown-item active" href="/">
+        <a class="dropdown-item active" href="https://eugenechen0514.github.io/blog/">
             繁體中文
         </a>
         </li></ul>
@@ -202,7 +202,7 @@ EugeneChen
 <div class="col-lg-8">
   <div class="container"><nav class="row card component" aria-label="breadcrumb">
   <div class="card-body pb-0">
-    <ol class="breadcrumb"><li class="breadcrumb-item text-surface"><a href="/">主頁</a></li><li class="breadcrumb-item text-surface"><a href="/series/">Series</a></li><li class="breadcrumb-item active">Day 23 - 二周目 - Redux 串接 React 與 Redux DevTools</li></ol>
+    <ol class="breadcrumb"><li class="breadcrumb-item text-surface"><a href="https://eugenechen0514.github.io/blog/">主頁</a></li><li class="breadcrumb-item text-surface"><a href="https://eugenechen0514.github.io/blog/series/">Series</a></li><li class="breadcrumb-item active">Day 23 - 二周目 - Redux 串接 React 與 Redux DevTools</li></ol>
   </div>
 </nav><div class="post-panel-wrapper position-sticky">
   <div class="d-flex flex-column component rounded post-panel position-absolute border">
@@ -239,11 +239,11 @@ EugeneChen
     2018-10-23
   </span><span class="post-reading-time me-1 mb-1">
     6 分鐘閱讀
-  </span><a href="/series/2019-ithome-ironman/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">用js成為老闆心中的全端工程師 - 2019 IT邦幫忙鐵人賽</a><a href="/tags/2019-it-%E9%82%A6%E5%B9%AB%E5%BF%99%E9%90%B5%E4%BA%BA%E8%B3%BD/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">2019 IT 邦幫忙鐵人賽</a><a href="/tags/%E7%94%A8js%E6%88%90%E7%82%BA%E8%80%81%E9%97%86%E5%BF%83%E4%B8%AD%E7%9A%84%E5%85%A8%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">用js成為老闆心中的全端工程師</a></div>
+  </span><a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">用js成為老闆心中的全端工程師 - 2019 IT邦幫忙鐵人賽</a><a href="https://eugenechen0514.github.io/blog/tags/2019-it-%E9%82%A6%E5%B9%AB%E5%BF%99%E9%90%B5%E4%BA%BA%E8%B3%BD/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">2019 IT 邦幫忙鐵人賽</a><a href="https://eugenechen0514.github.io/blog/tags/%E7%94%A8js%E6%88%90%E7%82%BA%E8%80%81%E9%97%86%E5%BF%83%E4%B8%AD%E7%9A%84%E5%85%A8%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">用js成為老闆心中的全端工程師</a></div>
 <div class="post-content mb-3"><p>實作 Redux 與 React 的串接</p>
 <h1 id="回憶">回憶<a class="anchor ms-1" href="#回憶"><i class="fas fa-link"></i></a></h1>
 <p>昨天介紹了 Flux 架構和它的實作套件 Redux。最後我們寫了簡單的 Redux 程式，體驗 Redux 如何運作。以 Flux 架構圖來說， 昨天的內容是
-<picture><img class="img-fluid" alt="30天鐵人-Day23-react-redux.png" src="/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/3D9E2E620F868C688621B5502DAC9AE1.png" loading="lazy"
+<picture><img class="img-fluid" alt="30天鐵人-Day23-react-redux.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/3D9E2E620F868C688621B5502DAC9AE1.png" loading="lazy"
     
     
      />
@@ -251,7 +251,7 @@ EugeneChen
 
 </p>
 <p>今天我們要專注在與 React 的串接
-<picture><img class="img-fluid" alt="30天鐵人-Day23-react-redux2.png" src="/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/7158DCD5A961E4454FA0E74431502F7C.png" loading="lazy"
+<picture><img class="img-fluid" alt="30天鐵人-Day23-react-redux2.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/7158DCD5A961E4454FA0E74431502F7C.png" loading="lazy"
     
     
      />
@@ -319,7 +319,7 @@ EugeneChen
 <h3 id="react-contextcomponent-tree-中任何地方都可以拿到的值">React Context：component tree 中任何地方都可以拿到的值<a class="anchor ms-1" href="#react-contextcomponent-tree-中任何地方都可以拿到的值"><i class="fas fa-link"></i></a></h3>
 <p>為了完成這件事要用到 <a href="https://reactjs.org/docs/context.html" target="_blank" rel="noopener noreferrer">React Context<i class="fas fa-external-link-square-alt ms-1"></i></a>，這是由 React 提供的，它的功用是在 component tree 中的上層把值送入後，底下的所有 subcomponent 任何一層都可以拿的到這值，而不用一個個傳遞下去。</p>
 <p>舉官方例子：
-<picture><img class="img-fluid" alt="30天鐵人-Day23-Context.png" src="/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/844A621BFDBFCD0C04FB33A4CD8A6271.png" loading="lazy"
+<picture><img class="img-fluid" alt="30天鐵人-Day23-Context.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/844A621BFDBFCD0C04FB33A4CD8A6271.png" loading="lazy"
     
     
      />
@@ -430,7 +430,7 @@ EugeneChen
 </ol>
 <h4 id="加入-message-state配置空間和設定預設值">加入 message state：配置空間和設定預設值<a class="anchor ms-1" href="#加入-message-state配置空間和設定預設值"><i class="fas fa-link"></i></a></h4>
 <p>因為 LoginBox container 的 message 的值我們還沒有設定，所以你打開 <code>npm run start</code>，只會看到
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-22 at 4.20.03 PM.png" src="/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/764482331EE217FC68671830449047E5.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-22 at 4.20.03 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/764482331EE217FC68671830449047E5.png" loading="lazy"
     
     
      />
@@ -457,7 +457,7 @@ EugeneChen
 <code>connect(...)(LoginBox)</code> 就好像把 <code>message</code> 送入 LoginBox pure component, ex: <code>&lt;LoginBox message={state.message} /&gt;</code></li>
 </ol>
 <p>結果如下：
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-22 at 4.29.35 PM.png" src="/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/EBBDA77C60987DB2232DB8F0CB7F62FF.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-22 at 4.29.35 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/EBBDA77C60987DB2232DB8F0CB7F62FF.png" loading="lazy"
     
     
      />
@@ -524,7 +524,7 @@ EugeneChen
 </span></span></code></pre></div></li>
 </ol>
 <p>結果如下：
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-22 at 5.03.44 PM.png" src="/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/2182DBA348A61455C84E39A564F00F93.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-22 at 5.03.44 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/2182DBA348A61455C84E39A564F00F93.png" loading="lazy"
     
     
      />
@@ -532,7 +532,7 @@ EugeneChen
 
 
 按下Submit，message 改變了
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-22 at 5.03.33 PM.png" src="/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/3B86E890F5085D380AD8BCCCC0373A0E.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-22 at 5.03.33 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/3B86E890F5085D380AD8BCCCC0373A0E.png" loading="lazy"
     
     
      />
@@ -540,7 +540,7 @@ EugeneChen
 
 </p>
 <p>最後看一下我們做了什麼？我們建了 Sore/Action/Container/Components 資料夾，來附合 Flux 架構，大部分 Flux 架構的前端專案都有類似的資料夾
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-23 at 11.18.56 AM.png" src="/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/1C92B061E5F97D59FE187129D0E5A01C.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-23 at 11.18.56 AM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/1C92B061E5F97D59FE187129D0E5A01C.png" loading="lazy"
     
     
      />
@@ -580,7 +580,7 @@ EugeneChen
 <li>開啟 Chrome DevTools(空白處右鍵 Inspect)，<strong>Redux</strong> 頁籤
 <ol>
 <li>一開啟網站的狀態
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-22 at 10.46.30 PM.png" src="/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/CCBE98CA80B89EAAE034AE685A3616FB.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-22 at 10.46.30 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/CCBE98CA80B89EAAE034AE685A3616FB.png" loading="lazy"
     
     
      />
@@ -588,7 +588,7 @@ EugeneChen
 
 </li>
 <li>按下 Submit 後發出 action (action type 是 <code>identityOnClickSubmit</code>)
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-22 at 10.46.39 PM.png" src="/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/E753286E3A2AC226C515F31736003784.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-22 at 10.46.39 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/E753286E3A2AC226C515F31736003784.png" loading="lazy"
     
     
      />
@@ -601,7 +601,7 @@ EugeneChen
 <p>Redux DevTools 有三種模式</p>
 <ol>
 <li>Log monitor：用來看 action log
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-22 at 10.46.39 PM.png" src="/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/E753286E3A2AC226C515F31736003784.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-22 at 10.46.39 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/E753286E3A2AC226C515F31736003784.png" loading="lazy"
     
     
      />
@@ -609,7 +609,7 @@ EugeneChen
 
 </li>
 <li>Inspector：最完整的模式。能看 Action/State/Diff/Test，但這模式太大型的網站可能會很慢或當掉
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-22 at 10.50.40 PM.png" src="/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/C9DA046AFD3EA0749DBE52FB0C20DF04.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-22 at 10.50.40 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/C9DA046AFD3EA0749DBE52FB0C20DF04.png" loading="lazy"
     
     
      />
@@ -617,7 +617,7 @@ EugeneChen
 
 </li>
 <li>Chart：state 的結構圖。 redux 的串接(<code>combineReducers()</code>) 會讓 state 是巢狀 object，這模式可以看 state 結構和各個 state 值。
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-22 at 10.50.59 PM.png" src="/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/A64FCA104E3252AB2FD0D3B23E205020.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-22 at 10.50.59 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-23-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E4%B8%B2%E6%8E%A5-react-%E8%88%87-redux-devtools/resources/A64FCA104E3252AB2FD0D3B23E205020.png" loading="lazy"
     
     
      />
@@ -630,10 +630,10 @@ EugeneChen
 <p>今天我們實際串接 Redux 和 React，利用 <strong>react-redux</strong> 套件，就不需要自己寫 React Context。為了確保有運行，我們還裝了 Chrome extension Redux DevTools，可以查看 Redux 的運作。</p></div></div>
   <div class="card-footer"><div class="post-navs d-flex justify-content-evenly"><div class="post-nav post-prev">
     <i class="fas fa-fw fa-chevron-circle-down post-prev-icon" data-fa-transform="rotate-90"></i>
-    <a href="/series/2019-ithome-ironman/day-22-%E4%BA%8C%E5%91%A8%E7%9B%AE-%E8%A7%A3%E9%96%8B-stateprop-%E7%9A%84%E6%B7%B7%E4%BA%82flux-%E5%96%AE%E5%90%91%E8%B3%87%E6%96%99%E6%B5%81%E6%9A%A8-redux-%E9%AB%94%E9%A9%97/">Day 22 - 二周目 - 解開 State:prop 的混亂：Flux 單向資料流暨 Redux 體驗
+    <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-22-%E4%BA%8C%E5%91%A8%E7%9B%AE-%E8%A7%A3%E9%96%8B-stateprop-%E7%9A%84%E6%B7%B7%E4%BA%82flux-%E5%96%AE%E5%90%91%E8%B3%87%E6%96%99%E6%B5%81%E6%9A%A8-redux-%E9%AB%94%E9%A9%97/">Day 22 - 二周目 - 解開 State:prop 的混亂：Flux 單向資料流暨 Redux 體驗
 </a>
   </div><div class="post-nav post-next">
-    <a href="/series/2019-ithome-ironman/day-24-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E5%A6%82%E4%BD%95%E7%99%BC%E5%87%BA%E9%9D%9E%E5%90%8C%E6%AD%A5-action%E5%BC%95%E5%85%A5%E9%9D%9E%E5%90%8C%E6%AD%A5-middleware/">Day 24 - 二周目 - Redux 如何發出非同步 Action：引入非同步 Middleware
+    <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-24-%E4%BA%8C%E5%91%A8%E7%9B%AE-redux-%E5%A6%82%E4%BD%95%E7%99%BC%E5%87%BA%E9%9D%9E%E5%90%8C%E6%AD%A5-action%E5%BC%95%E5%85%A5%E9%9D%9E%E5%90%8C%E6%AD%A5-middleware/">Day 24 - 二周目 - Redux 如何發出非同步 Action：引入非同步 Middleware
 </a>
     <i class="fas fa-fw fa-chevron-circle-down post-next-icon" data-fa-transform="rotate-270"></i>
   </div></div></div>
@@ -654,27 +654,27 @@ EugeneChen
     </div>
     <div class="card-body">
       <ul class="post-list list-unstyled"><li>
-          <a href="/series/2019-ithome-ironman/day-22-%E4%BA%8C%E5%91%A8%E7%9B%AE-%E8%A7%A3%E9%96%8B-stateprop-%E7%9A%84%E6%B7%B7%E4%BA%82flux-%E5%96%AE%E5%90%91%E8%B3%87%E6%96%99%E6%B5%81%E6%9A%A8-redux-%E9%AB%94%E9%A9%97/">Day 22 - 二周目 - 解開 State:prop 的混亂：Flux 單向資料流暨 Redux 體驗
+          <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-22-%E4%BA%8C%E5%91%A8%E7%9B%AE-%E8%A7%A3%E9%96%8B-stateprop-%E7%9A%84%E6%B7%B7%E4%BA%82flux-%E5%96%AE%E5%90%91%E8%B3%87%E6%96%99%E6%B5%81%E6%9A%A8-redux-%E9%AB%94%E9%A9%97/">Day 22 - 二周目 - 解開 State:prop 的混亂：Flux 單向資料流暨 Redux 體驗
 </a>
           <span class="float-end post-date">2018-10-22
 </span>
         </li><li>
-          <a href="/series/2019-ithome-ironman/day-21-%E4%BA%8C%E5%91%A8%E7%9B%AE-react-%E5%BF%85%E5%82%99%E7%9F%A5%E8%AD%98%E5%92%8C%E6%95%88%E8%83%BD%E8%AD%B0%E9%A1%8C/">Day 21 - 二周目 - React 必備知識和效能議題
+          <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-21-%E4%BA%8C%E5%91%A8%E7%9B%AE-react-%E5%BF%85%E5%82%99%E7%9F%A5%E8%AD%98%E5%92%8C%E6%95%88%E8%83%BD%E8%AD%B0%E9%A1%8C/">Day 21 - 二周目 - React 必備知識和效能議題
 </a>
           <span class="float-end post-date">2018-10-21
 </span>
         </li><li>
-          <a href="/series/2019-ithome-ironman/day-20-%E4%BA%8C%E5%91%A8%E7%9B%AE-%E8%BB%9F%E9%AB%94%E6%B8%AC%E8%A9%A6testing%E6%B8%AC%E8%A9%A6%E9%9D%9E%E5%90%8C%E6%AD%A5%E5%87%BD%E6%95%B8/">Day 20 - 二周目 - 軟體測試(Testing)：測試非同步函數
+          <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-20-%E4%BA%8C%E5%91%A8%E7%9B%AE-%E8%BB%9F%E9%AB%94%E6%B8%AC%E8%A9%A6testing%E6%B8%AC%E8%A9%A6%E9%9D%9E%E5%90%8C%E6%AD%A5%E5%87%BD%E6%95%B8/">Day 20 - 二周目 - 軟體測試(Testing)：測試非同步函數
 </a>
           <span class="float-end post-date">2018-10-20
 </span>
         </li><li>
-          <a href="/series/2019-ithome-ironman/day-19-%E4%BA%8C%E5%91%A8%E7%9B%AE-%E5%B8%B3%E5%AF%86%E8%AA%8D%E8%A8%BC%E8%88%87jwt-json-web-token%E5%82%B3%E9%81%9E/">Day 19 - 二周目 - 帳密認証與JWT (JSON Web Token)傳遞
+          <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-19-%E4%BA%8C%E5%91%A8%E7%9B%AE-%E5%B8%B3%E5%AF%86%E8%AA%8D%E8%A8%BC%E8%88%87jwt-json-web-token%E5%82%B3%E9%81%9E/">Day 19 - 二周目 - 帳密認証與JWT (JSON Web Token)傳遞
 </a>
           <span class="float-end post-date">2018-10-19
 </span>
         </li><li>
-          <a href="/series/2019-ithome-ironman/day-18-%E4%BA%8C%E5%91%A8%E7%9B%AE-%E5%89%96%E6%9E%90-express-%E8%B7%AF%E7%94%B1router-%E4%B8%89%E6%A6%82%E5%BF%B5%E4%B8%AD%E9%96%93%E4%BB%B6middleware%E8%B7%AF%E7%94%B1routing%E6%B5%81stream/">Day 18 - 二周目 - 剖析 Express 路由(router) 三概念：中間件(middleware)、路由(routing)、流(stream)
+          <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-18-%E4%BA%8C%E5%91%A8%E7%9B%AE-%E5%89%96%E6%9E%90-express-%E8%B7%AF%E7%94%B1router-%E4%B8%89%E6%A6%82%E5%BF%B5%E4%B8%AD%E9%96%93%E4%BB%B6middleware%E8%B7%AF%E7%94%B1routing%E6%B5%81stream/">Day 18 - 二周目 - 剖析 Express 路由(router) 三概念：中間件(middleware)、路由(routing)、流(stream)
 </a>
           <span class="float-end post-date">2018-10-18
 </span>
@@ -698,7 +698,7 @@ EugeneChen
     
     <div class="card row text-center profile component">
   <div class="card-body">
-    <div class="col-12 d-flex align-items-center justify-content-center"><picture><img class="profile-avatar rounded-circle" alt="EugeneChen" src="/images/profile.webp" loading="lazy" data-viewer-invisible
+    <div class="col-12 d-flex align-items-center justify-content-center"><picture><img class="profile-avatar rounded-circle" alt="EugeneChen" src="https://eugenechen0514.github.io/blog/images/profile.webp" loading="lazy" data-viewer-invisible
     
      width="298" height="305"
      />
@@ -706,7 +706,7 @@ EugeneChen
 </div>
     <div class="col-12 profile-meta"><div class="profile-name fw-fold fs-lg">EugeneChen</div><div class="profile-bio">軟體工程師，喜歡動手做些有的沒的專案，同時也喜愛數學、攝影、桌球，慢跑、游泳、作菜。</div><div class="profile-about"><i class="fas fa-fw fa-user"></i><a target="_blank" rel="noopener noreferrer" href="https://eugene-website.herokuapp.com">關於我</a></div><nav class="social-links nav justify-content-center"><a class="nav-link social-link" href="mailto:yujiechen0514@gmail.com" title="Email">
       <i class="fas fa-fw fa-2x fa-envelope"></i></a><a class="nav-link social-link" target="_blank" href="https://github.com/eugenechen0514" title="GitHub" rel="noopener noreferrer">
-        <i class="fa-fw fa-2x fab fa-github"></i></a><a class="nav-link social-link" target="_blank" href="/index.xml" title="RSS" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-github"></i></a><a class="nav-link social-link" target="_blank" href="https://eugenechen0514.github.io/blog/index.xml" title="RSS" rel="noopener noreferrer">
     <i class="fas fa-fw fa-2x fa-rss"></i></a></nav>
 </div>
   </div>
@@ -736,17 +736,17 @@ EugeneChen
             </li>
         </ul>
           
-        <div class="tab-content mt-3"><div class="tab-pane active" id="taxonomySeries" role="tabpanel" aria-labelledby="taxonomySeriesTab" tabindex="0"><a href="/series/2019-ithome-ironman/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="用js成為老闆心中的全端工程師 - 2019 iT邦幫忙鐵人賽">
-                        用js成為老闆心中的全端工程師 - 2019 iT邦幫忙鐵人賽<span class="badge badge-sm text-secondary bg-white ms-1">30</span></a></div><div class="tab-pane" id="taxonomyCategories" role="tabpanel" aria-labelledby="taxonomyCategoriesTab" tabindex="0"><a href="/categories/%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="隨手筆記">
-                        隨手筆記<span class="badge badge-sm text-secondary bg-white ms-1">2</span></a><a href="/categories/%E5%BF%83%E5%BE%97/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="心得">
-                        心得<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a></div><div class="tab-pane" id="taxonomyTags" role="tabpanel" aria-labelledby="taxonomyTagsTab" tabindex="0"><a href="/tags/2019-it-%E9%82%A6%E5%B9%AB%E5%BF%99%E9%90%B5%E4%BA%BA%E8%B3%BD/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="2019 iT 邦幫忙鐵人賽">
-                        2019 iT 邦幫忙鐵人賽<span class="badge badge-sm text-secondary bg-white ms-1">30</span></a><a href="/tags/%E7%94%A8js%E6%88%90%E7%82%BA%E8%80%81%E9%97%86%E5%BF%83%E4%B8%AD%E7%9A%84%E5%85%A8%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="用js成為老闆心中的全端工程師">
-                        用js成為老闆心中的全端工程師<span class="badge badge-sm text-secondary bg-white ms-1">30</span></a><a href="/tags/alphacamp/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="AlphaCamp">
-                        AlphaCamp<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="/tags/kafka/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="Kafka">
-                        Kafka<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="/tags/mongodb/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="MongoDB">
-                        MongoDB<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="/tags/pandas/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="pandas">
-                        pandas<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="/tags/python/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="python">
-                        python<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="/tags/%E6%8E%A8%E8%96%A6%E7%B3%BB%E7%B5%B1/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="推薦系統">
+        <div class="tab-content mt-3"><div class="tab-pane active" id="taxonomySeries" role="tabpanel" aria-labelledby="taxonomySeriesTab" tabindex="0"><a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="用js成為老闆心中的全端工程師 - 2019 iT邦幫忙鐵人賽">
+                        用js成為老闆心中的全端工程師 - 2019 iT邦幫忙鐵人賽<span class="badge badge-sm text-secondary bg-white ms-1">30</span></a></div><div class="tab-pane" id="taxonomyCategories" role="tabpanel" aria-labelledby="taxonomyCategoriesTab" tabindex="0"><a href="https://eugenechen0514.github.io/blog/categories/%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="隨手筆記">
+                        隨手筆記<span class="badge badge-sm text-secondary bg-white ms-1">2</span></a><a href="https://eugenechen0514.github.io/blog/categories/%E5%BF%83%E5%BE%97/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="心得">
+                        心得<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a></div><div class="tab-pane" id="taxonomyTags" role="tabpanel" aria-labelledby="taxonomyTagsTab" tabindex="0"><a href="https://eugenechen0514.github.io/blog/tags/2019-it-%E9%82%A6%E5%B9%AB%E5%BF%99%E9%90%B5%E4%BA%BA%E8%B3%BD/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="2019 iT 邦幫忙鐵人賽">
+                        2019 iT 邦幫忙鐵人賽<span class="badge badge-sm text-secondary bg-white ms-1">30</span></a><a href="https://eugenechen0514.github.io/blog/tags/%E7%94%A8js%E6%88%90%E7%82%BA%E8%80%81%E9%97%86%E5%BF%83%E4%B8%AD%E7%9A%84%E5%85%A8%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="用js成為老闆心中的全端工程師">
+                        用js成為老闆心中的全端工程師<span class="badge badge-sm text-secondary bg-white ms-1">30</span></a><a href="https://eugenechen0514.github.io/blog/tags/alphacamp/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="AlphaCamp">
+                        AlphaCamp<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="https://eugenechen0514.github.io/blog/tags/kafka/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="Kafka">
+                        Kafka<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="https://eugenechen0514.github.io/blog/tags/mongodb/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="MongoDB">
+                        MongoDB<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="https://eugenechen0514.github.io/blog/tags/pandas/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="pandas">
+                        pandas<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="https://eugenechen0514.github.io/blog/tags/python/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="python">
+                        python<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="https://eugenechen0514.github.io/blog/tags/%E6%8E%A8%E8%96%A6%E7%B3%BB%E7%B5%B1/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="推薦系統">
                         推薦系統<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a></div><div class="tab-pane" id="taxonomyArchive" role="tabpanel" aria-labelledby="taxonomyArchiveTab" tabindex="0"><a href="" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="2022">
     2022 <span class="badge badge-sm text-secondary bg-white ms-1">1</span>
     </a>
@@ -783,19 +783,19 @@ EugeneChen
   </div>
   <div class="card-body">
     <ul class="post-list list-unstyled ms-1"><li class="mb-2">
-        <a href="/posts/reviews/2022-02-06-alphacamp%E6%8E%A8%E8%96%A6%E7%B3%BB%E7%B5%B1%E4%B8%8A%E8%AA%B2%E5%BF%83%E5%BE%97/">AlphaCamp 推薦系統上課心得
+        <a href="https://eugenechen0514.github.io/blog/posts/reviews/2022-02-06-alphacamp%E6%8E%A8%E8%96%A6%E7%B3%BB%E7%B5%B1%E4%B8%8A%E8%AA%B2%E5%BF%83%E5%BE%97/">AlphaCamp 推薦系統上課心得
 </a>
       </li><li class="mb-2">
-        <a href="/posts/notes/2021-08-22-%E4%B8%80%E7%AA%BAkafka%E5%85%A7%E9%83%A8%E5%84%B2%E5%AD%98%E8%B3%87%E6%96%99/">一窺 Kafka 內部儲存資料
+        <a href="https://eugenechen0514.github.io/blog/posts/notes/2021-08-22-%E4%B8%80%E7%AA%BAkafka%E5%85%A7%E9%83%A8%E5%84%B2%E5%AD%98%E8%B3%87%E6%96%99/">一窺 Kafka 內部儲存資料
 </a>
       </li><li class="mb-2">
-        <a href="/posts/notes/2021-08-01-mongodb-5-%E4%BE%86%E4%BA%86%E6%9C%89%E4%BB%80%E9%BA%BC%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84%E6%9B%B4%E6%96%B0/">MongoDb 5 來了，有什麼值得注意的更新呢?
+        <a href="https://eugenechen0514.github.io/blog/posts/notes/2021-08-01-mongodb-5-%E4%BE%86%E4%BA%86%E6%9C%89%E4%BB%80%E9%BA%BC%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84%E6%9B%B4%E6%96%B0/">MongoDb 5 來了，有什麼值得注意的更新呢?
 </a>
       </li><li class="mb-2">
-        <a href="/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/">Day 30- 三周目 - Docker Network 暨完賽回顧
+        <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/">Day 30- 三周目 - Docker Network 暨完賽回顧
 </a>
       </li><li class="mb-2">
-        <a href="/series/2019-ithome-ironman/day-29-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-compose%E4%B8%80%E6%AC%A1%E7%AE%A1%E7%90%86%E5%A4%9A%E5%80%8B%E5%AE%B9%E5%99%A8/">Day 29- 三周目 - Docker Compose：一次管理多個容器
+        <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-29-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-compose%E4%B8%80%E6%AC%A1%E7%AE%A1%E7%90%86%E5%A4%9A%E5%80%8B%E5%AE%B9%E5%99%A8/">Day 29- 三周目 - Docker Compose：一次管理多個容器
 </a>
       </li></ul>
   </div>
@@ -815,11 +815,11 @@ EugeneChen
   </div>
   <div class="offcanvas-body mt-2"><div class="social-share mb-4 d-flex overflow-auto">
       <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Twitter Share Button"
-      target="_blank" href="https://twitter.com/intent/tweet?title=Day%2023%20-%20%e4%ba%8c%e5%91%a8%e7%9b%ae%20-%20Redux%20%e4%b8%b2%e6%8e%a5%20React%20%e8%88%87%20Redux%20DevTools&url=%2fseries%2f2019-ithome-ironman%2fday-23-%25E4%25BA%258C%25E5%2591%25A8%25E7%259B%25AE-redux-%25E4%25B8%25B2%25E6%258E%25A5-react-%25E8%2588%2587-redux-devtools%2f">
+      target="_blank" href="https://twitter.com/intent/tweet?title=Day%2023%20-%20%e4%ba%8c%e5%91%a8%e7%9b%ae%20-%20Redux%20%e4%b8%b2%e6%8e%a5%20React%20%e8%88%87%20Redux%20DevTools&url=https%3a%2f%2feugenechen0514.github.io%2fblog%2fseries%2f2019-ithome-ironman%2fday-23-%25E4%25BA%258C%25E5%2591%25A8%25E7%259B%25AE-redux-%25E4%25B8%25B2%25E6%258E%25A5-react-%25E8%2588%2587-redux-devtools%2f">
         <i class="fab fa-2x fa-fw fa-twitter mb-2"></i> Twitter
       </a>
       <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Facebook Share Button"
-        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fseries%2f2019-ithome-ironman%2fday-23-%25E4%25BA%258C%25E5%2591%25A8%25E7%259B%25AE-redux-%25E4%25B8%25B2%25E6%258E%25A5-react-%25E8%2588%2587-redux-devtools%2f">
+        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2feugenechen0514.github.io%2fblog%2fseries%2f2019-ithome-ironman%2fday-23-%25E4%25BA%258C%25E5%2591%25A8%25E7%259B%25AE-redux-%25E4%25B8%25B2%25E6%258E%25A5-react-%25E8%2588%2587-redux-devtools%2f">
         <i class="fab fa-2x fa-fw fa-facebook-f mb-2"></i> Facebook
       </a>
     </div>
@@ -839,7 +839,7 @@ EugeneChen
       <i class="fas fa-fw fa-2x fa-envelope"></i></a><a class="nav-link social-link" target="_blank" href="https://github.com/eugenechen0514" title="GitHub" rel="noopener noreferrer">
         <i class="fa-fw fa-2x fab fa-github"></i></a><a class="nav-link social-link" target="_blank" href="https://linkedin.com/in/yuchieh-chen-37a48989" title="LinkedIn" rel="noopener noreferrer">
         <i class="fa-fw fa-2x fab fa-linkedin-in"></i></a><a class="nav-link social-link" target="_blank" href="https://medium.com/@yujiechen0514" title="Medium" rel="noopener noreferrer">
-        <i class="fab fa-fw fa-2x fa-medium-m"></i></a><a class="nav-link social-link" target="_blank" href="/index.xml" title="RSS" rel="noopener noreferrer">
+        <i class="fab fa-fw fa-2x fa-medium-m"></i></a><a class="nav-link social-link" target="_blank" href="https://eugenechen0514.github.io/blog/index.xml" title="RSS" rel="noopener noreferrer">
     <i class="fas fa-fw fa-2x fa-rss"></i></a></nav>
 <div class="copyright mb-2">
   Copyright © 2016-2023 EugeneChen. All Rights Reserved.
@@ -856,18 +856,18 @@ EugeneChen
 
 </div>
 </footer>
-<script src="/assets/main/bundle.min.2bc7d6952dbf38d6d2815939c58fc655e72d050b196d9fd99829d8fb23904646.js" integrity="sha256-K8fWlS2/ONbSgVk5xY/GVectBQsZbZ/ZmCnY&#43;yOQRkY=" crossorigin="anonymous" defer></script><script src="/assets/icons/bundle.min.a4bf8247f780c9bf61d579a8efe7129ec790bb98622bf4a29895eb21e689266c.js" integrity="sha256-pL&#43;CR/eAyb9h1Xmo7&#43;cSnseQu5hiK/SimJXrIeaJJmw=" crossorigin="anonymous" defer></script>
+<script src="https://eugenechen0514.github.io/blog/assets/main/bundle.min.3eea8171736259ef18da123146148c0d95740c115fc00a673d7b9320ed6ec49a.js" integrity="sha256-PuqBcXNiWe8Y2hIxRhSMDZV0DBFfwApnPXuTIO1uxJo=" crossorigin="anonymous" defer></script><script src="https://eugenechen0514.github.io/blog/assets/icons/bundle.min.a4bf8247f780c9bf61d579a8efe7129ec790bb98622bf4a29895eb21e689266c.js" integrity="sha256-pL&#43;CR/eAyb9h1Xmo7&#43;cSnseQu5hiK/SimJXrIeaJJmw=" crossorigin="anonymous" defer></script>
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('\/service-worker.min.js').then(function(reg) {
+    navigator.serviceWorker.register('https:\/\/eugenechen0514.github.io\/blog\/service-worker.min.js').then(function(reg) {
       console.log('Successfully registered service worker', reg);
     }).catch(function(err) {
       console.warn('Error whilst registering service worker', err);
     });
   });
 }
-</script><script src="/assets/viewer/bundle.min.92d4a694e2e9a4c4d89b6998067e2f8e502dc7a951682bb5a160a3004b434908.js" integrity="sha256-ktSmlOLppMTYm2mYBn4vjlAtx6lRaCu1oWCjAEtDSQg=" crossorigin="anonymous" defer></script>
+</script><script src="https://eugenechen0514.github.io/blog/assets/viewer/bundle.min.92d4a694e2e9a4c4d89b6998067e2f8e502dc7a951682bb5a160a3004b434908.js" integrity="sha256-ktSmlOLppMTYm2mYBn4vjlAtx6lRaCu1oWCjAEtDSQg=" crossorigin="anonymous" defer></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -879,5 +879,5 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-<script src="/assets/docsearch/bundle.min.c6965b5bee044b874617239932d6a7992b217f7949f895a7576980d110fb2ab1.js" integrity="sha256-xpZbW&#43;4ES4dGFyOZMtanmSshf3lJ&#43;JWnV2mA0RD7KrE=" crossorigin="anonymous" defer></script></body>
+<script src="https://eugenechen0514.github.io/blog/assets/docsearch/bundle.min.c6965b5bee044b874617239932d6a7992b217f7949f895a7576980d110fb2ab1.js" integrity="sha256-xpZbW&#43;4ES4dGFyOZMtanmSshf3lJ&#43;JWnV2mA0RD7KrE=" crossorigin="anonymous" defer></script></body>
 </html>

@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Day 30- 三周目 - Docker network 暨完賽回顧 - EugeneChen</title><link rel="apple-touch-icon" href="/images/icons/icon-180x180.png" sizes="180x180">
-<link rel="icon" href="/images/icons/icon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/images/icons/icon-16x16.png" sizes="16x16" type="image/png">
-<link rel="icon" href="/images/icons/favicon.ico">
-<link rel="manifest" href="/manifest.json">
+    <title>Day 30- 三周目 - Docker network 暨完賽回顧 - EugeneChen</title><link rel="apple-touch-icon" href="https://eugenechen0514.github.io/blog/images/icons/icon-180x180.png" sizes="180x180">
+<link rel="icon" href="https://eugenechen0514.github.io/blog/images/icons/icon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://eugenechen0514.github.io/blog/images/icons/icon-16x16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://eugenechen0514.github.io/blog/images/icons/favicon.ico">
+<link rel="manifest" href="https://eugenechen0514.github.io/blog/manifest.json">
 <meta name="keywords" content="" />
 <meta name="description" content="介紹 Docker Network mode 和三十天的回顧" /><meta name="robots" content="index, follow" /><meta itemprop="name" content="Day 30- 三周目 - Docker network 暨完賽回顧">
 <meta itemprop="description" content="介紹 Docker Network mode 和三十天的回顧"><meta itemprop="datePublished" content="2018-10-30T00:00:00+00:00" />
@@ -17,18 +17,18 @@
 <meta itemprop="keywords" content="2019 iT 邦幫忙鐵人賽,用js成為老闆心中的全端工程師," /><meta property="og:title" content="Day 30- 三周目 - Docker network 暨完賽回顧" />
 <meta property="og:description" content="介紹 Docker Network mode 和三十天的回顧" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/" /><meta property="article:section" content="series" />
+<meta property="og:url" content="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/" /><meta property="article:section" content="series" />
 <meta property="article:published_time" content="2018-10-30T00:00:00+00:00" />
 <meta property="article:modified_time" content="2018-10-30T00:00:00+00:00" /><meta property="og:site_name" content="EugeneChen" />
-<meta property="og:see_also" content="/series/2019-ithome-ironman/day-29-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-compose%E4%B8%80%E6%AC%A1%E7%AE%A1%E7%90%86%E5%A4%9A%E5%80%8B%E5%AE%B9%E5%99%A8/" /><meta property="og:see_also" content="/series/2019-ithome-ironman/day-28-%E4%B8%89%E5%91%A8%E7%9B%AE-%E8%A3%BD%E4%BD%9C%E8%87%AA%E5%B7%B1%E7%9A%84%E6%98%A0%E5%83%8F%E6%AA%94%E5%8C%85%E6%89%93%E5%89%8D%E5%BE%8C%E7%AB%AF%E6%98%A0%E5%83%8F%E6%AA%94/" /><meta property="og:see_also" content="/series/2019-ithome-ironman/day-27-%E4%B8%89%E5%91%A8%E7%9B%AE-%E4%BA%94%E5%88%86%E9%90%98%E5%BB%BA%E7%AB%8B%E7%A7%81%E6%9C%89-npm-verdaccio/" /><meta property="og:see_also" content="/series/2019-ithome-ironman/day-26-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E7%9C%8B%E5%AE%8C%E5%B0%B1%E6%9C%83%E6%9E%B6-docker-%E5%8C%96%E7%9A%84%E6%9C%8D%E5%8B%99/" /><meta property="og:see_also" content="/series/2019-ithome-ironman/day-25-%E4%BA%8C%E5%91%A8%E7%9B%AE-react-component-%E5%A5%97%E4%BB%B6-material-ui-google-material-design-%E7%9A%84%E5%AF%A6%E4%BD%9C%E5%A5%97%E4%BB%B6/" />
+<meta property="og:see_also" content="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-29-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-compose%E4%B8%80%E6%AC%A1%E7%AE%A1%E7%90%86%E5%A4%9A%E5%80%8B%E5%AE%B9%E5%99%A8/" /><meta property="og:see_also" content="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-28-%E4%B8%89%E5%91%A8%E7%9B%AE-%E8%A3%BD%E4%BD%9C%E8%87%AA%E5%B7%B1%E7%9A%84%E6%98%A0%E5%83%8F%E6%AA%94%E5%8C%85%E6%89%93%E5%89%8D%E5%BE%8C%E7%AB%AF%E6%98%A0%E5%83%8F%E6%AA%94/" /><meta property="og:see_also" content="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-27-%E4%B8%89%E5%91%A8%E7%9B%AE-%E4%BA%94%E5%88%86%E9%90%98%E5%BB%BA%E7%AB%8B%E7%A7%81%E6%9C%89-npm-verdaccio/" /><meta property="og:see_also" content="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-26-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E7%9C%8B%E5%AE%8C%E5%B0%B1%E6%9C%83%E6%9E%B6-docker-%E5%8C%96%E7%9A%84%E6%9C%8D%E5%8B%99/" /><meta property="og:see_also" content="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-25-%E4%BA%8C%E5%91%A8%E7%9B%AE-react-component-%E5%A5%97%E4%BB%B6-material-ui-google-material-design-%E7%9A%84%E5%AF%A6%E4%BD%9C%E5%A5%97%E4%BB%B6/" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Day 30- 三周目 - Docker network 暨完賽回顧"/>
 <meta name="twitter:description" content="介紹 Docker Network mode 和三十天的回顧"/>
-<meta property="og:image" content="/images/logo.png"/>
-  <meta name="twitter:image" content="/images/logo.png"/><link rel="stylesheet" href="/assets/main/bundle.min.925f59d4c744cc5e99dcc7d02a6f68dff5cceaea488c7667bd947bf7aa35b649.css" integrity="sha256-kl9Z1MdEzF6Z3MfQKm9o3/XM6upIjHZnvZR796o1tkk=" crossorigin="anonymous"><link rel="stylesheet" href="/assets/viewer/bundle.min.f05183267bb952fbc8c63a7178364de2951614ab71d544ec1068ad36c7447ccc.css" integrity="sha256-8FGDJnu5UvvIxjpxeDZN4pUWFKtx1UTsEGitNsdEfMw=" crossorigin="anonymous"><link rel="stylesheet" href="/assets/docsearch/bundle.min.c165d6a127fffa285e6b89ef65362fe921bc0c1fdaefa35f6af069b962bdb50e.css" integrity="sha256-wWXWoSf/&#43;ihea4nvZTYv6SG8DB/a76NfavBpuWK9tQ4=" crossorigin="anonymous"></head>
-  <body><script>const items=["theme","palette"];items.forEach(function(e){const t=localStorage.getItem("hbs:"+e);t&&document.body.parentElement.setAttribute("data-"+e,t)})</script><header><nav class="top-app-bar shadow bg-primary text-white navbar navbar-expand-lg fixed-top">
-  <div class="container"><a class="navbar-brand flex-grow-1 flex-lg-grow-0 text-lg-start ms-2 ms-lg-0 mx-auto me-lg-3" href="/"><picture><img class="logo" alt="Logo" src="/images/logo.webp" loading="lazy"
+<meta property="og:image" content="https://eugenechen0514.github.io/blog/images/logo.png"/>
+  <meta name="twitter:image" content="https://eugenechen0514.github.io/blog/images/logo.png"/><link rel="stylesheet" href="https://eugenechen0514.github.io/blog/assets/main/bundle.min.925f59d4c744cc5e99dcc7d02a6f68dff5cceaea488c7667bd947bf7aa35b649.css" integrity="sha256-kl9Z1MdEzF6Z3MfQKm9o3/XM6upIjHZnvZR796o1tkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://eugenechen0514.github.io/blog/assets/viewer/bundle.min.f05183267bb952fbc8c63a7178364de2951614ab71d544ec1068ad36c7447ccc.css" integrity="sha256-8FGDJnu5UvvIxjpxeDZN4pUWFKtx1UTsEGitNsdEfMw=" crossorigin="anonymous"><link rel="stylesheet" href="https://eugenechen0514.github.io/blog/assets/docsearch/bundle.min.c165d6a127fffa285e6b89ef65362fe921bc0c1fdaefa35f6af069b962bdb50e.css" integrity="sha256-wWXWoSf/&#43;ihea4nvZTYv6SG8DB/a76NfavBpuWK9tQ4=" crossorigin="anonymous"></head>
+  <body><script>const items=["theme","palette"];items.forEach(function(e){const t=localStorage.getItem("hbs:blog:"+e);t&&document.body.parentElement.setAttribute("data-"+e,t)})</script><header><nav class="top-app-bar shadow bg-primary text-white navbar navbar-expand-lg fixed-top">
+  <div class="container"><a class="navbar-brand flex-grow-1 flex-lg-grow-0 text-lg-start ms-2 ms-lg-0 mx-auto me-lg-3" href="https://eugenechen0514.github.io/blog"><picture><img class="logo" alt="Logo" src="https://eugenechen0514.github.io/blog/images/logo.webp" loading="lazy"
     
      width="136" height="69"
      />
@@ -47,20 +47,20 @@ EugeneChen
       <div class="offcanvas-body p-4 pt-0 p-lg-0">
         <hr class="d-lg-none">
         <ul class="navbar-nav flex-row flex-wrap align-items-center me-auto"><li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="/posts/">
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://eugenechen0514.github.io/blog/posts/">
               <i class="fas fa-book fa-fw"></i>文章
             </a>
           </li><li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="/series/">
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://eugenechen0514.github.io/blog/series/">
               <i class="fas fa-bars fa-fw"></i>專欄
             </a>
           </li><li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="/posts/notes/">
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://eugenechen0514.github.io/blog/posts/notes/">
               <i class="fas fa-sticky-note fa-fw"></i>隨手筆記
             </a>
           </li></ul>
         <hr class="d-lg-none">
-        <form class="search-bar mx-auto my-1" action="/search" novalidate>
+        <form class="search-bar mx-auto my-1" action="https://eugenechen0514.github.io/blog/search" novalidate>
   <div class="input-group input-group-sm align-items-center">
     <span class="btn btn-search disabled position-absolute left-0 border-0">
       <i class="fas fa-fw fa-search fa-lg"></i>
@@ -75,11 +75,11 @@ EugeneChen
         <span class="d-lg-none">語言</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown"><li>
-        <a class="dropdown-item" href="/en/">
+        <a class="dropdown-item" href="https://eugenechen0514.github.io/blog/en/">
             English
         </a>
         </li><li>
-        <a class="dropdown-item active" href="/">
+        <a class="dropdown-item active" href="https://eugenechen0514.github.io/blog/">
             繁體中文
         </a>
         </li></ul>
@@ -202,7 +202,7 @@ EugeneChen
 <div class="col-lg-8">
   <div class="container"><nav class="row card component" aria-label="breadcrumb">
   <div class="card-body pb-0">
-    <ol class="breadcrumb"><li class="breadcrumb-item text-surface"><a href="/">主頁</a></li><li class="breadcrumb-item text-surface"><a href="/series/">Series</a></li><li class="breadcrumb-item active">Day 30- 三周目 - Docker Network 暨完賽回顧</li></ol>
+    <ol class="breadcrumb"><li class="breadcrumb-item text-surface"><a href="https://eugenechen0514.github.io/blog/">主頁</a></li><li class="breadcrumb-item text-surface"><a href="https://eugenechen0514.github.io/blog/series/">Series</a></li><li class="breadcrumb-item active">Day 30- 三周目 - Docker Network 暨完賽回顧</li></ol>
   </div>
 </nav><div class="post-panel-wrapper position-sticky">
   <div class="d-flex flex-column component rounded post-panel position-absolute border">
@@ -239,7 +239,7 @@ EugeneChen
     2018-10-30
   </span><span class="post-reading-time me-1 mb-1">
     6 分鐘閱讀
-  </span><a href="/series/2019-ithome-ironman/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">用js成為老闆心中的全端工程師 - 2019 IT邦幫忙鐵人賽</a><a href="/tags/2019-it-%E9%82%A6%E5%B9%AB%E5%BF%99%E9%90%B5%E4%BA%BA%E8%B3%BD/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">2019 IT 邦幫忙鐵人賽</a><a href="/tags/%E7%94%A8js%E6%88%90%E7%82%BA%E8%80%81%E9%97%86%E5%BF%83%E4%B8%AD%E7%9A%84%E5%85%A8%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">用js成為老闆心中的全端工程師</a></div>
+  </span><a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">用js成為老闆心中的全端工程師 - 2019 IT邦幫忙鐵人賽</a><a href="https://eugenechen0514.github.io/blog/tags/2019-it-%E9%82%A6%E5%B9%AB%E5%BF%99%E9%90%B5%E4%BA%BA%E8%B3%BD/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">2019 IT 邦幫忙鐵人賽</a><a href="https://eugenechen0514.github.io/blog/tags/%E7%94%A8js%E6%88%90%E7%82%BA%E8%80%81%E9%97%86%E5%BF%83%E4%B8%AD%E7%9A%84%E5%85%A8%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">用js成為老闆心中的全端工程師</a></div>
 <div class="post-content mb-3"><p>介紹 Docker Network mode 和三十天的回顧</p>
 <h1 id="回憶">回憶<a class="anchor ms-1" href="#回憶"><i class="fas fa-link"></i></a></h1>
 <p>昨天我們用 Compose file 一次描述三個容器， Compose file 如下：</p>
@@ -274,7 +274,7 @@ EugeneChen
 </span></span></span><span class="line"><span class="ln">29</span><span class="cl"><span class="w">            </span><span class="nt">NODE_ENV</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;development&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="ln">30</span><span class="cl"><span class="w">            </span><span class="nt">MONGODB_URL</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;mongodb://database:27017&#34;</span><span class="w">
 </span></span></span></code></pre></div><p>在用指令 <code>docker-compose</code> 建立並執行它們：
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-30 at 9.57.03 AM.png" src="/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/resources/D464C76060D7FCBCEECD0D373BB080F9.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-30 at 9.57.03 AM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/resources/D464C76060D7FCBCEECD0D373BB080F9.png" loading="lazy"
     
     
      />
@@ -294,7 +294,7 @@ EugeneChen
 <h2 id="bridge-mode">Bridge mode<a class="anchor ms-1" href="#bridge-mode"><i class="fas fa-link"></i></a></h2>
 <p>這是 Docker Compose 預設的網路模式，所有有 service 預設 <code>network_mode:</code> 都是 <strong>bridge</strong> (見 <a href="https://docs.docker.com/compose/compose-file/compose-file-v2/#network_mode" target="_blank" rel="noopener noreferrer">network_mode<i class="fas fa-external-link-square-alt ms-1"></i></a>)。當我們 <code>docker-compose up</code> 時，會建立一個名為 <code>&lt;dir_name&gt;_default</code> 的 network 出來，所有 bridge mode 的 container 會自己配網路卡並接上那個預設的 network。</p>
 <p>我們在回憶中的 Compose file，用圖解如下：
-<picture><img class="img-fluid" alt="30天鐵人-Day30-bridge.png" src="/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/resources/6D19119BD54218185DAF088958A6020A.png" loading="lazy"
+<picture><img class="img-fluid" alt="30天鐵人-Day30-bridge.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/resources/6D19119BD54218185DAF088958A6020A.png" loading="lazy"
     
     
      />
@@ -322,7 +322,7 @@ EugeneChen
 </span></span></span></code></pre></div><code>backend</code> 可以訪問 <code>database</code>。</li>
 <li>用 IP: 我們也可以直接指定 IP。
 指令 <code>docker network inspect ithelp-30dayfullstack-day30_default</code> 可以查詢「接上此 network 的 container 資訊」
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-30 at 10.43.26 AM.png" src="/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/resources/70981B2ED1B6CEED758D5301778CC0C5.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-30 at 10.43.26 AM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/resources/70981B2ED1B6CEED758D5301778CC0C5.png" loading="lazy"
     
     
      />
@@ -333,7 +333,7 @@ EugeneChen
 </ol>
 <h3 id="外界net-0如何存取-container-外界net-0---container">外界(NET-0)如何存取 container： 外界(NET-0) -> Container<a class="anchor ms-1" href="#外界net-0如何存取-container-外界net-0---container"><i class="fas fa-link"></i></a></h3>
 <p>若外界 <code>192.168.0.5</code> 要訪問我們的主機 <code>192.168.0.2:80</code> 的 <code>ithelp.front</code> 服務，我們要設定 <code>--publish</code>/<code>-p</code>。就是我們在 Docker file 中的 <code>ports:</code> 或 <code>docker run -p</code> 設定 publish。同時， <a href="https://zh.wikipedia.org/wiki/%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2" target="_blank" rel="noopener noreferrer">Network Address Translation(NAT)<i class="fas fa-external-link-square-alt ms-1"></i></a> 也會自動設定內外部 network 的轉換。</p>
-<p><picture><img class="img-fluid" alt="30天鐵人-Day30-bridge2.png" src="/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/resources/4700071906B74D286D0B2B38714BFFCC.png" loading="lazy"
+<p><picture><img class="img-fluid" alt="30天鐵人-Day30-bridge2.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/resources/4700071906B74D286D0B2B38714BFFCC.png" loading="lazy"
     
     
      />
@@ -341,7 +341,7 @@ EugeneChen
 
 </p>
 <p>從外界來看，邏輯上就像：
-<picture><img class="img-fluid" alt="30天鐵人-Day30-path.png" src="/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/resources/2EB68D2AD07C8083CFD0BD0EB2189B17.png" loading="lazy"
+<picture><img class="img-fluid" alt="30天鐵人-Day30-path.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/resources/2EB68D2AD07C8083CFD0BD0EB2189B17.png" loading="lazy"
     
     
      />
@@ -358,7 +358,7 @@ EugeneChen
 <p>你可以登入 container (<code>docker run -it &lt;id/container_name&gt; bash</code>) 試打看看(ex: telenet/ping/wget/curl)，就可以知道有沒有通。</p>
 </blockquote>
 <p>指令 <code>docker network inspect ithelp-30dayfullstack-day30_default</code> 就可以查到 gateway IP。
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-30 at 11.29.45 AM.png" src="/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/resources/66D816D3DA486FF35BD1ADFD7901BF77.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-30 at 11.29.45 AM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/resources/66D816D3DA486FF35BD1ADFD7901BF77.png" loading="lazy"
     
     
      />
@@ -418,7 +418,7 @@ EugeneChen
 </span></span></span><span class="line"><span class="ln">45</span><span class="cl"><span class="w">                </span>- <span class="nt">subnet</span><span class="p">:</span><span class="w"> </span><span class="m">172.28.0.0</span><span class="l">/16</span><span class="w">
 </span></span></span><span class="line"><span class="ln">46</span><span class="cl"><span class="w">                  </span><span class="nt">gateway</span><span class="p">:</span><span class="w"> </span><span class="m">172.28.0.1</span><span class="w">
 </span></span></span></code></pre></div><p>執行 <code>docker-compose -f docker-compose-bridge-static.yml up</code>，完成後去看看 <code> docker network inspect ithelp-30dayfullstack-day30_ithelp_application</code>，就是我們固定的 IP
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-30 at 11.49.51 AM.png" src="/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/resources/FA3A300E25025EBB71A143EAB33499C0.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-30 at 11.49.51 AM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/resources/FA3A300E25025EBB71A143EAB33499C0.png" loading="lazy"
     
     
      />
@@ -457,7 +457,7 @@ EugeneChen
 </span></span></span><span class="line"><span class="ln">24</span><span class="cl"><span class="w">            </span><span class="nt">PORT</span><span class="p">:</span><span class="w"> </span><span class="m">3001</span><span class="w">
 </span></span></span><span class="line"><span class="ln">25</span><span class="cl"><span class="w">            </span><span class="nt">NODE_ENV</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;development&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="ln">26</span><span class="cl"><span class="w">            </span><span class="nt">MONGODB_URL</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;mongodb://127.0.0.1:27017&#34;</span><span class="w">
-</span></span></span></code></pre></div><p><picture><img class="img-fluid" alt="30天鐵人-Day30-host.png" src="/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/resources/700A8BEFEAC253D86129245858C3B7C7.png" loading="lazy"
+</span></span></span></code></pre></div><p><picture><img class="img-fluid" alt="30天鐵人-Day30-host.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/resources/700A8BEFEAC253D86129245858C3B7C7.png" loading="lazy"
     
     
      />
@@ -586,7 +586,7 @@ EugeneChen
 <p>因為寫的很趕，寫完後，只能校稿一次，也許會有不通順的地方請見諒。內容不完整或缺少的部分，我目前在計畫找時間補上。未來的文章，有可能會在 <a href="https://medium.com/@yujiechen0514" target="_blank" rel="noopener noreferrer">Medium<i class="fas fa-external-link-square-alt ms-1"></i></a> 或 <a href="https://ithelp.ithome.com.tw/users/20110371/articles" target="_blank" rel="noopener noreferrer">iT邦幫忙<i class="fas fa-external-link-square-alt ms-1"></i></a> 同時發佈，喜歡的話可以 Follow，謝謝各位。</p></div></div>
   <div class="card-footer"><div class="post-navs d-flex justify-content-evenly"><div class="post-nav post-prev">
     <i class="fas fa-fw fa-chevron-circle-down post-prev-icon" data-fa-transform="rotate-90"></i>
-    <a href="/series/2019-ithome-ironman/day-29-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-compose%E4%B8%80%E6%AC%A1%E7%AE%A1%E7%90%86%E5%A4%9A%E5%80%8B%E5%AE%B9%E5%99%A8/">Day 29- 三周目 - Docker Compose：一次管理多個容器
+    <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-29-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-compose%E4%B8%80%E6%AC%A1%E7%AE%A1%E7%90%86%E5%A4%9A%E5%80%8B%E5%AE%B9%E5%99%A8/">Day 29- 三周目 - Docker Compose：一次管理多個容器
 </a>
   </div></div></div>
 </article><div class="post-copyright mb-3 row card component" id="post-copyright">
@@ -606,27 +606,27 @@ EugeneChen
     </div>
     <div class="card-body">
       <ul class="post-list list-unstyled"><li>
-          <a href="/series/2019-ithome-ironman/day-29-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-compose%E4%B8%80%E6%AC%A1%E7%AE%A1%E7%90%86%E5%A4%9A%E5%80%8B%E5%AE%B9%E5%99%A8/">Day 29- 三周目 - Docker Compose：一次管理多個容器
+          <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-29-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-compose%E4%B8%80%E6%AC%A1%E7%AE%A1%E7%90%86%E5%A4%9A%E5%80%8B%E5%AE%B9%E5%99%A8/">Day 29- 三周目 - Docker Compose：一次管理多個容器
 </a>
           <span class="float-end post-date">2018-10-29
 </span>
         </li><li>
-          <a href="/series/2019-ithome-ironman/day-28-%E4%B8%89%E5%91%A8%E7%9B%AE-%E8%A3%BD%E4%BD%9C%E8%87%AA%E5%B7%B1%E7%9A%84%E6%98%A0%E5%83%8F%E6%AA%94%E5%8C%85%E6%89%93%E5%89%8D%E5%BE%8C%E7%AB%AF%E6%98%A0%E5%83%8F%E6%AA%94/">Day 28 - 三周目 - 製作自己的映像檔：包打前後端映像檔
+          <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-28-%E4%B8%89%E5%91%A8%E7%9B%AE-%E8%A3%BD%E4%BD%9C%E8%87%AA%E5%B7%B1%E7%9A%84%E6%98%A0%E5%83%8F%E6%AA%94%E5%8C%85%E6%89%93%E5%89%8D%E5%BE%8C%E7%AB%AF%E6%98%A0%E5%83%8F%E6%AA%94/">Day 28 - 三周目 - 製作自己的映像檔：包打前後端映像檔
 </a>
           <span class="float-end post-date">2018-10-28
 </span>
         </li><li>
-          <a href="/series/2019-ithome-ironman/day-27-%E4%B8%89%E5%91%A8%E7%9B%AE-%E4%BA%94%E5%88%86%E9%90%98%E5%BB%BA%E7%AB%8B%E7%A7%81%E6%9C%89-npm-verdaccio/">Day 27 - 三周目 - 五分鐘建立私有 NPM: Verdaccio
+          <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-27-%E4%B8%89%E5%91%A8%E7%9B%AE-%E4%BA%94%E5%88%86%E9%90%98%E5%BB%BA%E7%AB%8B%E7%A7%81%E6%9C%89-npm-verdaccio/">Day 27 - 三周目 - 五分鐘建立私有 NPM: Verdaccio
 </a>
           <span class="float-end post-date">2018-10-27
 </span>
         </li><li>
-          <a href="/series/2019-ithome-ironman/day-26-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E7%9C%8B%E5%AE%8C%E5%B0%B1%E6%9C%83%E6%9E%B6-docker-%E5%8C%96%E7%9A%84%E6%9C%8D%E5%8B%99/">Day 26 - 三周目 - Docker 基本使用：看完就會架 Docker 化的服務
+          <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-26-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E7%9C%8B%E5%AE%8C%E5%B0%B1%E6%9C%83%E6%9E%B6-docker-%E5%8C%96%E7%9A%84%E6%9C%8D%E5%8B%99/">Day 26 - 三周目 - Docker 基本使用：看完就會架 Docker 化的服務
 </a>
           <span class="float-end post-date">2018-10-26
 </span>
         </li><li>
-          <a href="/series/2019-ithome-ironman/day-25-%E4%BA%8C%E5%91%A8%E7%9B%AE-react-component-%E5%A5%97%E4%BB%B6-material-ui-google-material-design-%E7%9A%84%E5%AF%A6%E4%BD%9C%E5%A5%97%E4%BB%B6/">Day 25 - 二周目 - React Component 套件 Material-UI： Google Material Design 的實作套件
+          <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-25-%E4%BA%8C%E5%91%A8%E7%9B%AE-react-component-%E5%A5%97%E4%BB%B6-material-ui-google-material-design-%E7%9A%84%E5%AF%A6%E4%BD%9C%E5%A5%97%E4%BB%B6/">Day 25 - 二周目 - React Component 套件 Material-UI： Google Material Design 的實作套件
 </a>
           <span class="float-end post-date">2018-10-25
 </span>
@@ -650,7 +650,7 @@ EugeneChen
     
     <div class="card row text-center profile component">
   <div class="card-body">
-    <div class="col-12 d-flex align-items-center justify-content-center"><picture><img class="profile-avatar rounded-circle" alt="EugeneChen" src="/images/profile.webp" loading="lazy" data-viewer-invisible
+    <div class="col-12 d-flex align-items-center justify-content-center"><picture><img class="profile-avatar rounded-circle" alt="EugeneChen" src="https://eugenechen0514.github.io/blog/images/profile.webp" loading="lazy" data-viewer-invisible
     
      width="298" height="305"
      />
@@ -658,7 +658,7 @@ EugeneChen
 </div>
     <div class="col-12 profile-meta"><div class="profile-name fw-fold fs-lg">EugeneChen</div><div class="profile-bio">軟體工程師，喜歡動手做些有的沒的專案，同時也喜愛數學、攝影、桌球，慢跑、游泳、作菜。</div><div class="profile-about"><i class="fas fa-fw fa-user"></i><a target="_blank" rel="noopener noreferrer" href="https://eugene-website.herokuapp.com">關於我</a></div><nav class="social-links nav justify-content-center"><a class="nav-link social-link" href="mailto:yujiechen0514@gmail.com" title="Email">
       <i class="fas fa-fw fa-2x fa-envelope"></i></a><a class="nav-link social-link" target="_blank" href="https://github.com/eugenechen0514" title="GitHub" rel="noopener noreferrer">
-        <i class="fa-fw fa-2x fab fa-github"></i></a><a class="nav-link social-link" target="_blank" href="/index.xml" title="RSS" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-github"></i></a><a class="nav-link social-link" target="_blank" href="https://eugenechen0514.github.io/blog/index.xml" title="RSS" rel="noopener noreferrer">
     <i class="fas fa-fw fa-2x fa-rss"></i></a></nav>
 </div>
   </div>
@@ -688,17 +688,17 @@ EugeneChen
             </li>
         </ul>
           
-        <div class="tab-content mt-3"><div class="tab-pane active" id="taxonomySeries" role="tabpanel" aria-labelledby="taxonomySeriesTab" tabindex="0"><a href="/series/2019-ithome-ironman/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="用js成為老闆心中的全端工程師 - 2019 iT邦幫忙鐵人賽">
-                        用js成為老闆心中的全端工程師 - 2019 iT邦幫忙鐵人賽<span class="badge badge-sm text-secondary bg-white ms-1">30</span></a></div><div class="tab-pane" id="taxonomyCategories" role="tabpanel" aria-labelledby="taxonomyCategoriesTab" tabindex="0"><a href="/categories/%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="隨手筆記">
-                        隨手筆記<span class="badge badge-sm text-secondary bg-white ms-1">2</span></a><a href="/categories/%E5%BF%83%E5%BE%97/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="心得">
-                        心得<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a></div><div class="tab-pane" id="taxonomyTags" role="tabpanel" aria-labelledby="taxonomyTagsTab" tabindex="0"><a href="/tags/2019-it-%E9%82%A6%E5%B9%AB%E5%BF%99%E9%90%B5%E4%BA%BA%E8%B3%BD/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="2019 iT 邦幫忙鐵人賽">
-                        2019 iT 邦幫忙鐵人賽<span class="badge badge-sm text-secondary bg-white ms-1">30</span></a><a href="/tags/%E7%94%A8js%E6%88%90%E7%82%BA%E8%80%81%E9%97%86%E5%BF%83%E4%B8%AD%E7%9A%84%E5%85%A8%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="用js成為老闆心中的全端工程師">
-                        用js成為老闆心中的全端工程師<span class="badge badge-sm text-secondary bg-white ms-1">30</span></a><a href="/tags/alphacamp/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="AlphaCamp">
-                        AlphaCamp<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="/tags/kafka/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="Kafka">
-                        Kafka<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="/tags/mongodb/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="MongoDB">
-                        MongoDB<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="/tags/pandas/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="pandas">
-                        pandas<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="/tags/python/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="python">
-                        python<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="/tags/%E6%8E%A8%E8%96%A6%E7%B3%BB%E7%B5%B1/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="推薦系統">
+        <div class="tab-content mt-3"><div class="tab-pane active" id="taxonomySeries" role="tabpanel" aria-labelledby="taxonomySeriesTab" tabindex="0"><a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="用js成為老闆心中的全端工程師 - 2019 iT邦幫忙鐵人賽">
+                        用js成為老闆心中的全端工程師 - 2019 iT邦幫忙鐵人賽<span class="badge badge-sm text-secondary bg-white ms-1">30</span></a></div><div class="tab-pane" id="taxonomyCategories" role="tabpanel" aria-labelledby="taxonomyCategoriesTab" tabindex="0"><a href="https://eugenechen0514.github.io/blog/categories/%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="隨手筆記">
+                        隨手筆記<span class="badge badge-sm text-secondary bg-white ms-1">2</span></a><a href="https://eugenechen0514.github.io/blog/categories/%E5%BF%83%E5%BE%97/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="心得">
+                        心得<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a></div><div class="tab-pane" id="taxonomyTags" role="tabpanel" aria-labelledby="taxonomyTagsTab" tabindex="0"><a href="https://eugenechen0514.github.io/blog/tags/2019-it-%E9%82%A6%E5%B9%AB%E5%BF%99%E9%90%B5%E4%BA%BA%E8%B3%BD/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="2019 iT 邦幫忙鐵人賽">
+                        2019 iT 邦幫忙鐵人賽<span class="badge badge-sm text-secondary bg-white ms-1">30</span></a><a href="https://eugenechen0514.github.io/blog/tags/%E7%94%A8js%E6%88%90%E7%82%BA%E8%80%81%E9%97%86%E5%BF%83%E4%B8%AD%E7%9A%84%E5%85%A8%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="用js成為老闆心中的全端工程師">
+                        用js成為老闆心中的全端工程師<span class="badge badge-sm text-secondary bg-white ms-1">30</span></a><a href="https://eugenechen0514.github.io/blog/tags/alphacamp/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="AlphaCamp">
+                        AlphaCamp<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="https://eugenechen0514.github.io/blog/tags/kafka/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="Kafka">
+                        Kafka<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="https://eugenechen0514.github.io/blog/tags/mongodb/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="MongoDB">
+                        MongoDB<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="https://eugenechen0514.github.io/blog/tags/pandas/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="pandas">
+                        pandas<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="https://eugenechen0514.github.io/blog/tags/python/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="python">
+                        python<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="https://eugenechen0514.github.io/blog/tags/%E6%8E%A8%E8%96%A6%E7%B3%BB%E7%B5%B1/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="推薦系統">
                         推薦系統<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a></div><div class="tab-pane" id="taxonomyArchive" role="tabpanel" aria-labelledby="taxonomyArchiveTab" tabindex="0"><a href="" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="2022">
     2022 <span class="badge badge-sm text-secondary bg-white ms-1">1</span>
     </a>
@@ -737,19 +737,19 @@ EugeneChen
   </div>
   <div class="card-body">
     <ul class="post-list list-unstyled ms-1"><li class="mb-2">
-        <a href="/posts/reviews/2022-02-06-alphacamp%E6%8E%A8%E8%96%A6%E7%B3%BB%E7%B5%B1%E4%B8%8A%E8%AA%B2%E5%BF%83%E5%BE%97/">AlphaCamp 推薦系統上課心得
+        <a href="https://eugenechen0514.github.io/blog/posts/reviews/2022-02-06-alphacamp%E6%8E%A8%E8%96%A6%E7%B3%BB%E7%B5%B1%E4%B8%8A%E8%AA%B2%E5%BF%83%E5%BE%97/">AlphaCamp 推薦系統上課心得
 </a>
       </li><li class="mb-2">
-        <a href="/posts/notes/2021-08-22-%E4%B8%80%E7%AA%BAkafka%E5%85%A7%E9%83%A8%E5%84%B2%E5%AD%98%E8%B3%87%E6%96%99/">一窺 Kafka 內部儲存資料
+        <a href="https://eugenechen0514.github.io/blog/posts/notes/2021-08-22-%E4%B8%80%E7%AA%BAkafka%E5%85%A7%E9%83%A8%E5%84%B2%E5%AD%98%E8%B3%87%E6%96%99/">一窺 Kafka 內部儲存資料
 </a>
       </li><li class="mb-2">
-        <a href="/posts/notes/2021-08-01-mongodb-5-%E4%BE%86%E4%BA%86%E6%9C%89%E4%BB%80%E9%BA%BC%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84%E6%9B%B4%E6%96%B0/">MongoDb 5 來了，有什麼值得注意的更新呢?
+        <a href="https://eugenechen0514.github.io/blog/posts/notes/2021-08-01-mongodb-5-%E4%BE%86%E4%BA%86%E6%9C%89%E4%BB%80%E9%BA%BC%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84%E6%9B%B4%E6%96%B0/">MongoDb 5 來了，有什麼值得注意的更新呢?
 </a>
       </li><li class="mb-2">
-        <a href="/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/">Day 30- 三周目 - Docker Network 暨完賽回顧
+        <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/">Day 30- 三周目 - Docker Network 暨完賽回顧
 </a>
       </li><li class="mb-2">
-        <a href="/series/2019-ithome-ironman/day-29-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-compose%E4%B8%80%E6%AC%A1%E7%AE%A1%E7%90%86%E5%A4%9A%E5%80%8B%E5%AE%B9%E5%99%A8/">Day 29- 三周目 - Docker Compose：一次管理多個容器
+        <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-29-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-compose%E4%B8%80%E6%AC%A1%E7%AE%A1%E7%90%86%E5%A4%9A%E5%80%8B%E5%AE%B9%E5%99%A8/">Day 29- 三周目 - Docker Compose：一次管理多個容器
 </a>
       </li></ul>
   </div>
@@ -769,11 +769,11 @@ EugeneChen
   </div>
   <div class="offcanvas-body mt-2"><div class="social-share mb-4 d-flex overflow-auto">
       <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Twitter Share Button"
-      target="_blank" href="https://twitter.com/intent/tweet?title=Day%2030-%20%e4%b8%89%e5%91%a8%e7%9b%ae%20-%20Docker%20network%20%e6%9a%a8%e5%ae%8c%e8%b3%bd%e5%9b%9e%e9%a1%a7&url=%2fseries%2f2019-ithome-ironman%2fday-30-%25E4%25B8%2589%25E5%2591%25A8%25E7%259B%25AE-docker-network-%25E6%259A%25A8%25E5%25AE%258C%25E8%25B3%25BD%25E5%259B%259E%25E9%25A1%25A7%2f">
+      target="_blank" href="https://twitter.com/intent/tweet?title=Day%2030-%20%e4%b8%89%e5%91%a8%e7%9b%ae%20-%20Docker%20network%20%e6%9a%a8%e5%ae%8c%e8%b3%bd%e5%9b%9e%e9%a1%a7&url=https%3a%2f%2feugenechen0514.github.io%2fblog%2fseries%2f2019-ithome-ironman%2fday-30-%25E4%25B8%2589%25E5%2591%25A8%25E7%259B%25AE-docker-network-%25E6%259A%25A8%25E5%25AE%258C%25E8%25B3%25BD%25E5%259B%259E%25E9%25A1%25A7%2f">
         <i class="fab fa-2x fa-fw fa-twitter mb-2"></i> Twitter
       </a>
       <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Facebook Share Button"
-        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fseries%2f2019-ithome-ironman%2fday-30-%25E4%25B8%2589%25E5%2591%25A8%25E7%259B%25AE-docker-network-%25E6%259A%25A8%25E5%25AE%258C%25E8%25B3%25BD%25E5%259B%259E%25E9%25A1%25A7%2f">
+        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2feugenechen0514.github.io%2fblog%2fseries%2f2019-ithome-ironman%2fday-30-%25E4%25B8%2589%25E5%2591%25A8%25E7%259B%25AE-docker-network-%25E6%259A%25A8%25E5%25AE%258C%25E8%25B3%25BD%25E5%259B%259E%25E9%25A1%25A7%2f">
         <i class="fab fa-2x fa-fw fa-facebook-f mb-2"></i> Facebook
       </a>
     </div>
@@ -793,7 +793,7 @@ EugeneChen
       <i class="fas fa-fw fa-2x fa-envelope"></i></a><a class="nav-link social-link" target="_blank" href="https://github.com/eugenechen0514" title="GitHub" rel="noopener noreferrer">
         <i class="fa-fw fa-2x fab fa-github"></i></a><a class="nav-link social-link" target="_blank" href="https://linkedin.com/in/yuchieh-chen-37a48989" title="LinkedIn" rel="noopener noreferrer">
         <i class="fa-fw fa-2x fab fa-linkedin-in"></i></a><a class="nav-link social-link" target="_blank" href="https://medium.com/@yujiechen0514" title="Medium" rel="noopener noreferrer">
-        <i class="fab fa-fw fa-2x fa-medium-m"></i></a><a class="nav-link social-link" target="_blank" href="/index.xml" title="RSS" rel="noopener noreferrer">
+        <i class="fab fa-fw fa-2x fa-medium-m"></i></a><a class="nav-link social-link" target="_blank" href="https://eugenechen0514.github.io/blog/index.xml" title="RSS" rel="noopener noreferrer">
     <i class="fas fa-fw fa-2x fa-rss"></i></a></nav>
 <div class="copyright mb-2">
   Copyright © 2016-2023 EugeneChen. All Rights Reserved.
@@ -810,18 +810,18 @@ EugeneChen
 
 </div>
 </footer>
-<script src="/assets/main/bundle.min.2bc7d6952dbf38d6d2815939c58fc655e72d050b196d9fd99829d8fb23904646.js" integrity="sha256-K8fWlS2/ONbSgVk5xY/GVectBQsZbZ/ZmCnY&#43;yOQRkY=" crossorigin="anonymous" defer></script><script src="/assets/icons/bundle.min.a4bf8247f780c9bf61d579a8efe7129ec790bb98622bf4a29895eb21e689266c.js" integrity="sha256-pL&#43;CR/eAyb9h1Xmo7&#43;cSnseQu5hiK/SimJXrIeaJJmw=" crossorigin="anonymous" defer></script>
+<script src="https://eugenechen0514.github.io/blog/assets/main/bundle.min.3eea8171736259ef18da123146148c0d95740c115fc00a673d7b9320ed6ec49a.js" integrity="sha256-PuqBcXNiWe8Y2hIxRhSMDZV0DBFfwApnPXuTIO1uxJo=" crossorigin="anonymous" defer></script><script src="https://eugenechen0514.github.io/blog/assets/icons/bundle.min.a4bf8247f780c9bf61d579a8efe7129ec790bb98622bf4a29895eb21e689266c.js" integrity="sha256-pL&#43;CR/eAyb9h1Xmo7&#43;cSnseQu5hiK/SimJXrIeaJJmw=" crossorigin="anonymous" defer></script>
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('\/service-worker.min.js').then(function(reg) {
+    navigator.serviceWorker.register('https:\/\/eugenechen0514.github.io\/blog\/service-worker.min.js').then(function(reg) {
       console.log('Successfully registered service worker', reg);
     }).catch(function(err) {
       console.warn('Error whilst registering service worker', err);
     });
   });
 }
-</script><script src="/assets/viewer/bundle.min.92d4a694e2e9a4c4d89b6998067e2f8e502dc7a951682bb5a160a3004b434908.js" integrity="sha256-ktSmlOLppMTYm2mYBn4vjlAtx6lRaCu1oWCjAEtDSQg=" crossorigin="anonymous" defer></script>
+</script><script src="https://eugenechen0514.github.io/blog/assets/viewer/bundle.min.92d4a694e2e9a4c4d89b6998067e2f8e502dc7a951682bb5a160a3004b434908.js" integrity="sha256-ktSmlOLppMTYm2mYBn4vjlAtx6lRaCu1oWCjAEtDSQg=" crossorigin="anonymous" defer></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -833,5 +833,5 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-<script src="/assets/docsearch/bundle.min.c6965b5bee044b874617239932d6a7992b217f7949f895a7576980d110fb2ab1.js" integrity="sha256-xpZbW&#43;4ES4dGFyOZMtanmSshf3lJ&#43;JWnV2mA0RD7KrE=" crossorigin="anonymous" defer></script></body>
+<script src="https://eugenechen0514.github.io/blog/assets/docsearch/bundle.min.c6965b5bee044b874617239932d6a7992b217f7949f895a7576980d110fb2ab1.js" integrity="sha256-xpZbW&#43;4ES4dGFyOZMtanmSshf3lJ&#43;JWnV2mA0RD7KrE=" crossorigin="anonymous" defer></script></body>
 </html>

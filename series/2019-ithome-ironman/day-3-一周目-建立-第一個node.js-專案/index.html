@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Day 3 - 一周目- 建立第一個Node.js 專案 - EugeneChen</title><link rel="apple-touch-icon" href="/images/icons/icon-180x180.png" sizes="180x180">
-<link rel="icon" href="/images/icons/icon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/images/icons/icon-16x16.png" sizes="16x16" type="image/png">
-<link rel="icon" href="/images/icons/favicon.ico">
-<link rel="manifest" href="/manifest.json">
+    <title>Day 3 - 一周目- 建立第一個Node.js 專案 - EugeneChen</title><link rel="apple-touch-icon" href="https://eugenechen0514.github.io/blog/images/icons/icon-180x180.png" sizes="180x180">
+<link rel="icon" href="https://eugenechen0514.github.io/blog/images/icons/icon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://eugenechen0514.github.io/blog/images/icons/icon-16x16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://eugenechen0514.github.io/blog/images/icons/favicon.ico">
+<link rel="manifest" href="https://eugenechen0514.github.io/blog/manifest.json">
 <meta name="keywords" content="" />
 <meta name="description" content="建立第一個Node.js 專案" /><meta name="robots" content="index, follow" /><meta itemprop="name" content="Day 3 - 一周目- 建立第一個Node.js 專案">
 <meta itemprop="description" content="建立第一個Node.js 專案"><meta itemprop="datePublished" content="2018-10-03T00:00:00+00:00" />
@@ -17,18 +17,18 @@
 <meta itemprop="keywords" content="2019 iT 邦幫忙鐵人賽,用js成為老闆心中的全端工程師," /><meta property="og:title" content="Day 3 - 一周目- 建立第一個Node.js 專案" />
 <meta property="og:description" content="建立第一個Node.js 專案" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/" /><meta property="article:section" content="series" />
+<meta property="og:url" content="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/" /><meta property="article:section" content="series" />
 <meta property="article:published_time" content="2018-10-03T00:00:00+00:00" />
 <meta property="article:modified_time" content="2018-10-03T00:00:00+00:00" /><meta property="og:site_name" content="EugeneChen" />
-<meta property="og:see_also" content="/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/" /><meta property="og:see_also" content="/series/2019-ithome-ironman/day-29-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-compose%E4%B8%80%E6%AC%A1%E7%AE%A1%E7%90%86%E5%A4%9A%E5%80%8B%E5%AE%B9%E5%99%A8/" /><meta property="og:see_also" content="/series/2019-ithome-ironman/day-28-%E4%B8%89%E5%91%A8%E7%9B%AE-%E8%A3%BD%E4%BD%9C%E8%87%AA%E5%B7%B1%E7%9A%84%E6%98%A0%E5%83%8F%E6%AA%94%E5%8C%85%E6%89%93%E5%89%8D%E5%BE%8C%E7%AB%AF%E6%98%A0%E5%83%8F%E6%AA%94/" /><meta property="og:see_also" content="/series/2019-ithome-ironman/day-27-%E4%B8%89%E5%91%A8%E7%9B%AE-%E4%BA%94%E5%88%86%E9%90%98%E5%BB%BA%E7%AB%8B%E7%A7%81%E6%9C%89-npm-verdaccio/" /><meta property="og:see_also" content="/series/2019-ithome-ironman/day-26-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E7%9C%8B%E5%AE%8C%E5%B0%B1%E6%9C%83%E6%9E%B6-docker-%E5%8C%96%E7%9A%84%E6%9C%8D%E5%8B%99/" /><meta property="og:see_also" content="/series/2019-ithome-ironman/day-25-%E4%BA%8C%E5%91%A8%E7%9B%AE-react-component-%E5%A5%97%E4%BB%B6-material-ui-google-material-design-%E7%9A%84%E5%AF%A6%E4%BD%9C%E5%A5%97%E4%BB%B6/" />
+<meta property="og:see_also" content="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/" /><meta property="og:see_also" content="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-29-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-compose%E4%B8%80%E6%AC%A1%E7%AE%A1%E7%90%86%E5%A4%9A%E5%80%8B%E5%AE%B9%E5%99%A8/" /><meta property="og:see_also" content="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-28-%E4%B8%89%E5%91%A8%E7%9B%AE-%E8%A3%BD%E4%BD%9C%E8%87%AA%E5%B7%B1%E7%9A%84%E6%98%A0%E5%83%8F%E6%AA%94%E5%8C%85%E6%89%93%E5%89%8D%E5%BE%8C%E7%AB%AF%E6%98%A0%E5%83%8F%E6%AA%94/" /><meta property="og:see_also" content="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-27-%E4%B8%89%E5%91%A8%E7%9B%AE-%E4%BA%94%E5%88%86%E9%90%98%E5%BB%BA%E7%AB%8B%E7%A7%81%E6%9C%89-npm-verdaccio/" /><meta property="og:see_also" content="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-26-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E7%9C%8B%E5%AE%8C%E5%B0%B1%E6%9C%83%E6%9E%B6-docker-%E5%8C%96%E7%9A%84%E6%9C%8D%E5%8B%99/" /><meta property="og:see_also" content="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-25-%E4%BA%8C%E5%91%A8%E7%9B%AE-react-component-%E5%A5%97%E4%BB%B6-material-ui-google-material-design-%E7%9A%84%E5%AF%A6%E4%BD%9C%E5%A5%97%E4%BB%B6/" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Day 3 - 一周目- 建立第一個Node.js 專案"/>
 <meta name="twitter:description" content="建立第一個Node.js 專案"/>
-<meta property="og:image" content="/images/logo.png"/>
-  <meta name="twitter:image" content="/images/logo.png"/><link rel="stylesheet" href="/assets/main/bundle.min.925f59d4c744cc5e99dcc7d02a6f68dff5cceaea488c7667bd947bf7aa35b649.css" integrity="sha256-kl9Z1MdEzF6Z3MfQKm9o3/XM6upIjHZnvZR796o1tkk=" crossorigin="anonymous"><link rel="stylesheet" href="/assets/viewer/bundle.min.f05183267bb952fbc8c63a7178364de2951614ab71d544ec1068ad36c7447ccc.css" integrity="sha256-8FGDJnu5UvvIxjpxeDZN4pUWFKtx1UTsEGitNsdEfMw=" crossorigin="anonymous"><link rel="stylesheet" href="/assets/docsearch/bundle.min.c165d6a127fffa285e6b89ef65362fe921bc0c1fdaefa35f6af069b962bdb50e.css" integrity="sha256-wWXWoSf/&#43;ihea4nvZTYv6SG8DB/a76NfavBpuWK9tQ4=" crossorigin="anonymous"></head>
-  <body><script>const items=["theme","palette"];items.forEach(function(e){const t=localStorage.getItem("hbs:"+e);t&&document.body.parentElement.setAttribute("data-"+e,t)})</script><header><nav class="top-app-bar shadow bg-primary text-white navbar navbar-expand-lg fixed-top">
-  <div class="container"><a class="navbar-brand flex-grow-1 flex-lg-grow-0 text-lg-start ms-2 ms-lg-0 mx-auto me-lg-3" href="/"><picture><img class="logo" alt="Logo" src="/images/logo.webp" loading="lazy"
+<meta property="og:image" content="https://eugenechen0514.github.io/blog/images/logo.png"/>
+  <meta name="twitter:image" content="https://eugenechen0514.github.io/blog/images/logo.png"/><link rel="stylesheet" href="https://eugenechen0514.github.io/blog/assets/main/bundle.min.925f59d4c744cc5e99dcc7d02a6f68dff5cceaea488c7667bd947bf7aa35b649.css" integrity="sha256-kl9Z1MdEzF6Z3MfQKm9o3/XM6upIjHZnvZR796o1tkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://eugenechen0514.github.io/blog/assets/viewer/bundle.min.f05183267bb952fbc8c63a7178364de2951614ab71d544ec1068ad36c7447ccc.css" integrity="sha256-8FGDJnu5UvvIxjpxeDZN4pUWFKtx1UTsEGitNsdEfMw=" crossorigin="anonymous"><link rel="stylesheet" href="https://eugenechen0514.github.io/blog/assets/docsearch/bundle.min.c165d6a127fffa285e6b89ef65362fe921bc0c1fdaefa35f6af069b962bdb50e.css" integrity="sha256-wWXWoSf/&#43;ihea4nvZTYv6SG8DB/a76NfavBpuWK9tQ4=" crossorigin="anonymous"></head>
+  <body><script>const items=["theme","palette"];items.forEach(function(e){const t=localStorage.getItem("hbs:blog:"+e);t&&document.body.parentElement.setAttribute("data-"+e,t)})</script><header><nav class="top-app-bar shadow bg-primary text-white navbar navbar-expand-lg fixed-top">
+  <div class="container"><a class="navbar-brand flex-grow-1 flex-lg-grow-0 text-lg-start ms-2 ms-lg-0 mx-auto me-lg-3" href="https://eugenechen0514.github.io/blog"><picture><img class="logo" alt="Logo" src="https://eugenechen0514.github.io/blog/images/logo.webp" loading="lazy"
     
      width="136" height="69"
      />
@@ -47,20 +47,20 @@ EugeneChen
       <div class="offcanvas-body p-4 pt-0 p-lg-0">
         <hr class="d-lg-none">
         <ul class="navbar-nav flex-row flex-wrap align-items-center me-auto"><li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="/posts/">
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://eugenechen0514.github.io/blog/posts/">
               <i class="fas fa-book fa-fw"></i>文章
             </a>
           </li><li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="/series/">
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://eugenechen0514.github.io/blog/series/">
               <i class="fas fa-bars fa-fw"></i>專欄
             </a>
           </li><li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="/posts/notes/">
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://eugenechen0514.github.io/blog/posts/notes/">
               <i class="fas fa-sticky-note fa-fw"></i>隨手筆記
             </a>
           </li></ul>
         <hr class="d-lg-none">
-        <form class="search-bar mx-auto my-1" action="/search" novalidate>
+        <form class="search-bar mx-auto my-1" action="https://eugenechen0514.github.io/blog/search" novalidate>
   <div class="input-group input-group-sm align-items-center">
     <span class="btn btn-search disabled position-absolute left-0 border-0">
       <i class="fas fa-fw fa-search fa-lg"></i>
@@ -75,11 +75,11 @@ EugeneChen
         <span class="d-lg-none">語言</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown"><li>
-        <a class="dropdown-item" href="/en/">
+        <a class="dropdown-item" href="https://eugenechen0514.github.io/blog/en/">
             English
         </a>
         </li><li>
-        <a class="dropdown-item active" href="/">
+        <a class="dropdown-item active" href="https://eugenechen0514.github.io/blog/">
             繁體中文
         </a>
         </li></ul>
@@ -202,7 +202,7 @@ EugeneChen
 <div class="col-lg-8">
   <div class="container"><nav class="row card component" aria-label="breadcrumb">
   <div class="card-body pb-0">
-    <ol class="breadcrumb"><li class="breadcrumb-item text-surface"><a href="/">主頁</a></li><li class="breadcrumb-item text-surface"><a href="/series/">Series</a></li><li class="breadcrumb-item active">Day 3 - 一周目- 建立第一個Node.js 專案</li></ol>
+    <ol class="breadcrumb"><li class="breadcrumb-item text-surface"><a href="https://eugenechen0514.github.io/blog/">主頁</a></li><li class="breadcrumb-item text-surface"><a href="https://eugenechen0514.github.io/blog/series/">Series</a></li><li class="breadcrumb-item active">Day 3 - 一周目- 建立第一個Node.js 專案</li></ol>
   </div>
 </nav><div class="post-panel-wrapper position-sticky">
   <div class="d-flex flex-column component rounded post-panel position-absolute border">
@@ -239,7 +239,7 @@ EugeneChen
     2018-10-03
   </span><span class="post-reading-time me-1 mb-1">
     6 分鐘閱讀
-  </span><a href="/series/2019-ithome-ironman/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">用js成為老闆心中的全端工程師 - 2019 IT邦幫忙鐵人賽</a><a href="/tags/2019-it-%E9%82%A6%E5%B9%AB%E5%BF%99%E9%90%B5%E4%BA%BA%E8%B3%BD/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">2019 IT 邦幫忙鐵人賽</a><a href="/tags/%E7%94%A8js%E6%88%90%E7%82%BA%E8%80%81%E9%97%86%E5%BF%83%E4%B8%AD%E7%9A%84%E5%85%A8%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">用js成為老闆心中的全端工程師</a></div>
+  </span><a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">用js成為老闆心中的全端工程師 - 2019 IT邦幫忙鐵人賽</a><a href="https://eugenechen0514.github.io/blog/tags/2019-it-%E9%82%A6%E5%B9%AB%E5%BF%99%E9%90%B5%E4%BA%BA%E8%B3%BD/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">2019 IT 邦幫忙鐵人賽</a><a href="https://eugenechen0514.github.io/blog/tags/%E7%94%A8js%E6%88%90%E7%82%BA%E8%80%81%E9%97%86%E5%BF%83%E4%B8%AD%E7%9A%84%E5%85%A8%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy">用js成為老闆心中的全端工程師</a></div>
 <div class="post-content mb-3"><p>今天我們要正式使用 VSCode 來建立 Node.js 專案，未來的前後端專案都是用Node.js 專案建立的。</p>
 <h1 id="回憶">回憶<a class="anchor ms-1" href="#回憶"><i class="fas fa-link"></i></a></h1>
 <p>昨天介紹指令的使用和用Markdown 做筆記、draw.io 畫圖，這些技能可以發揮在所有專案</p>
@@ -261,7 +261,7 @@ EugeneChen
 <ol>
 <li><a href="https://nodejs.org/en/" target="_blank" rel="noopener noreferrer">https://nodejs.org/en/<i class="fas fa-external-link-square-alt ms-1"></i></a>，下載 Node.js</li>
 <li>一進去會看到
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 4.49.16 PM.png" src="/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/DBC2763A7900F05F5FDCE77D52E9FFC3.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 4.49.16 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/DBC2763A7900F05F5FDCE77D52E9FFC3.png" loading="lazy"
     
     
      />
@@ -270,7 +270,7 @@ EugeneChen
 
 LTS (Long Term Support) 是長時間的維護，點擊 <a href="https://github.com/nodejs/Release#release-schedule" target="_blank" rel="noopener noreferrer"><em><strong>Long Term Support (LTS) schedule</strong></em><i class="fas fa-external-link-square-alt ms-1"></i></a> 可以查看維護時間表。想安裝哪個都可以，因為本主題用的都是精典的 Node.js 模組。我的話會選10版的，因為<a href="https://nodejs.org/dist/latest-v10.x/docs/api/n-api.html#n_api_n_api" target="_blank" rel="noopener noreferrer">N-API<i class="fas fa-external-link-square-alt ms-1"></i></a> (C++編譯出的執行程式在Node.js環境中使用，且與Node.js版本無關)正式支援，多學點不錯阿！若你考慮到長期維護可以選8版的。</li>
 <li>安裝完成後，來看看你安裝的版本。開啟 <em><strong>hello-nodejs</strong></em> 的 VSCode 專案資料夾，再開打開 terminal(需要幫助的人可以看<a href="https://ithelp.ithome.com.tw/articles/10199491" target="_blank" rel="noopener noreferrer">Day 1 - 前言／開發環境準備<i class="fas fa-external-link-square-alt ms-1"></i></a>)，輸入 <code>node --version</code>
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 7.24.11 PM.png" src="/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/4A07489684FA61E3F517C7B0480C92FE.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 7.24.11 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/4A07489684FA61E3F517C7B0480C92FE.png" loading="lazy"
     
     
      />
@@ -318,7 +318,7 @@ LTS (Long Term Support) 是長時間的維護，點擊 <a href="https://github.c
 <p>package.json 有一堆參數，每次都要自己來嗎？不用。只要在terminal輸入</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">npm init
 </span></span></code></pre></div><p>指令就會出現初始化專案的設定提示。
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 7.58.25 PM.png" src="/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/12EB5BDAD6F55010238E643963BC2FAF.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 7.58.25 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/12EB5BDAD6F55010238E643963BC2FAF.png" loading="lazy"
     
     
      />
@@ -333,7 +333,7 @@ LTS (Long Term Support) 是長時間的維護，點擊 <a href="https://github.c
 <h2 id="安裝你的第一個套件-lodash">安裝你的第一個套件 lodash<a class="anchor ms-1" href="#安裝你的第一個套件-lodash"><i class="fas fa-link"></i></a></h2>
 <p>在terminal輸入</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">npm install lodash --save
-</span></span></code></pre></div><p><picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 8.16.04 PM.png" src="/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/321C61661DA2D8A42B55886AB45802E1.png" loading="lazy"
+</span></span></code></pre></div><p><picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 8.16.04 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/321C61661DA2D8A42B55886AB45802E1.png" loading="lazy"
     
     
      />
@@ -342,7 +342,7 @@ LTS (Long Term Support) 是長時間的維護，點擊 <a href="https://github.c
 
 npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener noreferrer">npmjs registry<i class="fas fa-external-link-square-alt ms-1"></i></a>下載套件，你會發現多出 <em><strong>package-lock.json</strong></em> 和 <em><strong>node_modules</strong></em> 資料夾。
 <em><strong>package-lock.json</strong></em> 用來記錄各套件的相依版本號記錄；而 <em><strong>node_modules</strong></em> 就是存放套件程式碼的資料夾，所以打開後你可以看到 lodash 套件的所有程式碼。
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 8.24.08 PM.png" src="/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/918251E1FE46871FB71001792178E364.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 8.24.08 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/918251E1FE46871FB71001792178E364.png" loading="lazy"
     
     
      />
@@ -373,7 +373,7 @@ npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener norefe
 <li>簡寫 <code>install</code> 成 <code>i</code> ，如：<code>npm install</code> 改成 <code>npm i</code></li>
 <li>安裝新的shell指令
 <code>npm install jest -g</code> 可以安裝 jest 指令，我們就有 <code>jest</code>指令，下 <code>jest</code> 指令 就會找所有測試程式執行測試
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 8.57.20 PM.png" src="/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/F47B5B65C179113056838E2E28C08A50.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 8.57.20 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/F47B5B65C179113056838E2E28C08A50.png" loading="lazy"
     
     
      />
@@ -389,7 +389,7 @@ npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener norefe
 <h2 id="建立第一隻程式indexjs">建立第一隻程式：index.js<a class="anchor ms-1" href="#建立第一隻程式indexjs"><i class="fas fa-link"></i></a></h2>
 <ol>
 <li>建立名為 index.js 的檔案
-<picture><img class="img-fluid" alt="Screen Recording 2018-10-03 at 9.08.49 PM.gif" src="/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/F4AFFE303B5398E67E8FD8DF4A62957B.gif" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Recording 2018-10-03 at 9.08.49 PM.gif" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/F4AFFE303B5398E67E8FD8DF4A62957B.gif" loading="lazy"
     
     
      />
@@ -404,7 +404,7 @@ npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener norefe
 <p>我們介紹三種執行它的方法</p>
 <ol>
 <li>用 <code>node index.js</code> 指令執行
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 9.16.27 PM.png" src="/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/FD73BCB9D250C45CE32B12E3F5978557.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 9.16.27 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/FD73BCB9D250C45CE32B12E3F5978557.png" loading="lazy"
     
     
      />
@@ -417,7 +417,7 @@ npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener norefe
 </span></span><span class="line"><span class="ln">2</span><span class="cl">    <span class="nt">&#34;start&#34;</span><span class="p">:</span> <span class="s2">&#34;node index.js&#34;</span>
 </span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="p">}</span><span class="err">,</span>
 </span></span></code></pre></div>接下來執行 <code>npm run start</code>
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 9.21.48 PM.png" src="/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/CC1F08C9135BCB023272AB5BC0DCECDC.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 9.21.48 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/CC1F08C9135BCB023272AB5BC0DCECDC.png" loading="lazy"
     
     
      />
@@ -427,7 +427,7 @@ npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener norefe
 <li>用 VSCode 執行
 <ol>
 <li>開啟 debug 頁籤
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 9.25.32 PM.png" src="/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/CB1747BA344A9190816888BA8E4C150A.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 9.25.32 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/CB1747BA344A9190816888BA8E4C150A.png" loading="lazy"
     
     
      />
@@ -435,7 +435,7 @@ npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener norefe
 
 </li>
 <li>建立 VSCode 執行組態
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 9.27.47 PM.png" src="/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/5CCB548B6FF7144D539E6088AB662790.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 9.27.47 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/5CCB548B6FF7144D539E6088AB662790.png" loading="lazy"
     
     
      />
@@ -443,7 +443,7 @@ npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener norefe
 
 </li>
 <li>執行debug
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 9.30.21 PM.png" src="/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/3BACBF3B25E556D211D5433F9E3510E8.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 9.30.21 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/3BACBF3B25E556D211D5433F9E3510E8.png" loading="lazy"
     
     
      />
@@ -455,7 +455,7 @@ npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener norefe
 </ol>
 <h2 id="vscode-執行組態">VSCode 執行組態<a class="anchor ms-1" href="#vscode-執行組態"><i class="fas fa-link"></i></a></h2>
 <p>我們之前用VSCode 執行後，會發現專案資料夾多個一個資料夾 <code>.vscode</code> 且裡面多出一個 <code>launch.json</code> 檔案。</p>
-<p><picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 9.31.55 PM.png" src="/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/DAF44BA968315ABECF1827A7723D5B7B.png" loading="lazy"
+<p><picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 9.31.55 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/DAF44BA968315ABECF1827A7723D5B7B.png" loading="lazy"
     
     
      />
@@ -465,7 +465,7 @@ npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener norefe
 <h3 id="nodejs-執行組態">Node.js 執行組態<a class="anchor ms-1" href="#nodejs-執行組態"><i class="fas fa-link"></i></a></h3>
 <p>還記得我之前說的嗎？ VSCode的一個專案就是一個資料夾，然而 <code>.vscode</code> 裡面就會放 VSCode 專案的設定檔。如果你是用<a href="https://www.jetbrains.com/webstorm/" target="_blank" rel="noopener noreferrer">WebStorm<i class="fas fa-external-link-square-alt ms-1"></i></a>編輯器，編輯器的設定檔會放在<code>.idea</code>裡。</p>
 <p><code>launch.json</code> 裡面會放可以執行的組態，按小綠箭頭便會執行所選的組態。下圖
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 9.42.28 PM.png" src="/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/DDCFF666C43777200A35D4BB092F03CA.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 9.42.28 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/DDCFF666C43777200A35D4BB092F03CA.png" loading="lazy"
     
     
      />
@@ -475,14 +475,14 @@ npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener norefe
 就是有一個執行組態，名為 <em><strong>Launch Program</strong></em>，執行類型是<a href="https://code.visualstudio.com/docs/editor/debugging#_launchjson-attributes" target="_blank" rel="noopener noreferrer"><em><strong>node</strong></em><i class="fas fa-external-link-square-alt ms-1"></i></a> ，執行 <code>${workspaceFolder}/index.js</code> 的程式，這裡 <code>${workspaceFolder}</code> 是VSCode的變數(Variable substitution)，指向專案根目錄。更多屬性設定見<a href="https://go.microsoft.com/fwlink/?linkid=830387" target="_blank" rel="noopener noreferrer">Launch configurations<i class="fas fa-external-link-square-alt ms-1"></i></a>。</p>
 <h3 id="加入新的組態透過-npm-執行腳本">加入新的組態：透過 npm 執行腳本<a class="anchor ms-1" href="#加入新的組態透過-npm-執行腳本"><i class="fas fa-link"></i></a></h3>
 <p>VSCode 可以幫我們快速加入一個組態
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 9.53.45 PM.png" src="/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/3B37E13A3B7B5D1A370C7B292DBF0A8C.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 9.53.45 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/3B37E13A3B7B5D1A370C7B292DBF0A8C.png" loading="lazy"
     
     
      />
 </picture>
 
 </p>
-<p><picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 9.53.53 PM.png" src="/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/07DE03CF2184BB12F79263AA9FCA2D50.png" loading="lazy"
+<p><picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 9.53.53 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/07DE03CF2184BB12F79263AA9FCA2D50.png" loading="lazy"
     
     
      />
@@ -514,7 +514,7 @@ npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener norefe
 </span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="nt">&#34;port&#34;</span><span class="p">:</span> <span class="mi">9229</span>
 </span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>接下來，執行 <strong>Start Without Debugging</strong>，相當於在terminal執行 <code>npm run start</code>
-<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 10.06.37 PM.png" src="/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/3015EBF6B7EAFEAE8B7BD9319CB45A14.png" loading="lazy"
+<picture><img class="img-fluid" alt="Screen Shot 2018-10-03 at 10.06.37 PM.png" src="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-3-%E4%B8%80%E5%91%A8%E7%9B%AE-%E5%BB%BA%E7%AB%8B-%E7%AC%AC%E4%B8%80%E5%80%8Bnode.js-%E5%B0%88%E6%A1%88/resources/3015EBF6B7EAFEAE8B7BD9319CB45A14.png" loading="lazy"
     
     
      />
@@ -526,10 +526,10 @@ npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener norefe
 <p>今天介紹了 Node.js 專案，還有如何執行 <strong>.js</strong> 程式碼。透過VSCode的執行組態我們可以更靈活、方便的執行程式，也可以用來執行特殊的工作。</p></div></div>
   <div class="card-footer"><div class="post-navs d-flex justify-content-evenly"><div class="post-nav post-prev">
     <i class="fas fa-fw fa-chevron-circle-down post-prev-icon" data-fa-transform="rotate-90"></i>
-    <a href="/series/2019-ithome-ironman/day-2-%E4%B8%80%E8%BC%A9%E5%AD%90%E5%8F%97%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7/">Day 2 - 一輩子受用的工具
+    <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-2-%E4%B8%80%E8%BC%A9%E5%AD%90%E5%8F%97%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7/">Day 2 - 一輩子受用的工具
 </a>
   </div><div class="post-nav post-next">
-    <a href="/series/2019-ithome-ironman/day-4-%E4%B8%80%E5%91%A8%E7%9B%AE-%E7%94%A8vscode-debug-%E6%A8%A1%E5%BC%8F%E7%8E%A9%E7%8E%A9-es6-%E5%B8%B8%E7%94%A8%E8%AA%9E%E6%B3%95/">Day 4 - 一周目- 用VSCode Debug 模式，玩玩 ES6 常用語法
+    <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-4-%E4%B8%80%E5%91%A8%E7%9B%AE-%E7%94%A8vscode-debug-%E6%A8%A1%E5%BC%8F%E7%8E%A9%E7%8E%A9-es6-%E5%B8%B8%E7%94%A8%E8%AA%9E%E6%B3%95/">Day 4 - 一周目- 用VSCode Debug 模式，玩玩 ES6 常用語法
 </a>
     <i class="fas fa-fw fa-chevron-circle-down post-next-icon" data-fa-transform="rotate-270"></i>
   </div></div></div>
@@ -550,12 +550,12 @@ npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener norefe
     </div>
     <div class="card-body">
       <ul class="post-list list-unstyled"><li>
-          <a href="/series/2019-ithome-ironman/day-2-%E4%B8%80%E8%BC%A9%E5%AD%90%E5%8F%97%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7/">Day 2 - 一輩子受用的工具
+          <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-2-%E4%B8%80%E8%BC%A9%E5%AD%90%E5%8F%97%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7/">Day 2 - 一輩子受用的工具
 </a>
           <span class="float-end post-date">2018-10-02
 </span>
         </li><li>
-          <a href="/series/2019-ithome-ironman/day-1-%E5%89%8D%E8%A8%80%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E6%BA%96%E5%82%99/">Day 1 - 前言／開發環境準備
+          <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-1-%E5%89%8D%E8%A8%80%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E6%BA%96%E5%82%99/">Day 1 - 前言／開發環境準備
 </a>
           <span class="float-end post-date">2018-10-01
 </span>
@@ -579,7 +579,7 @@ npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener norefe
     
     <div class="card row text-center profile component">
   <div class="card-body">
-    <div class="col-12 d-flex align-items-center justify-content-center"><picture><img class="profile-avatar rounded-circle" alt="EugeneChen" src="/images/profile.webp" loading="lazy" data-viewer-invisible
+    <div class="col-12 d-flex align-items-center justify-content-center"><picture><img class="profile-avatar rounded-circle" alt="EugeneChen" src="https://eugenechen0514.github.io/blog/images/profile.webp" loading="lazy" data-viewer-invisible
     
      width="298" height="305"
      />
@@ -587,7 +587,7 @@ npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener norefe
 </div>
     <div class="col-12 profile-meta"><div class="profile-name fw-fold fs-lg">EugeneChen</div><div class="profile-bio">軟體工程師，喜歡動手做些有的沒的專案，同時也喜愛數學、攝影、桌球，慢跑、游泳、作菜。</div><div class="profile-about"><i class="fas fa-fw fa-user"></i><a target="_blank" rel="noopener noreferrer" href="https://eugene-website.herokuapp.com">關於我</a></div><nav class="social-links nav justify-content-center"><a class="nav-link social-link" href="mailto:yujiechen0514@gmail.com" title="Email">
       <i class="fas fa-fw fa-2x fa-envelope"></i></a><a class="nav-link social-link" target="_blank" href="https://github.com/eugenechen0514" title="GitHub" rel="noopener noreferrer">
-        <i class="fa-fw fa-2x fab fa-github"></i></a><a class="nav-link social-link" target="_blank" href="/index.xml" title="RSS" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-github"></i></a><a class="nav-link social-link" target="_blank" href="https://eugenechen0514.github.io/blog/index.xml" title="RSS" rel="noopener noreferrer">
     <i class="fas fa-fw fa-2x fa-rss"></i></a></nav>
 </div>
   </div>
@@ -617,17 +617,17 @@ npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener norefe
             </li>
         </ul>
           
-        <div class="tab-content mt-3"><div class="tab-pane active" id="taxonomySeries" role="tabpanel" aria-labelledby="taxonomySeriesTab" tabindex="0"><a href="/series/2019-ithome-ironman/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="用js成為老闆心中的全端工程師 - 2019 iT邦幫忙鐵人賽">
-                        用js成為老闆心中的全端工程師 - 2019 iT邦幫忙鐵人賽<span class="badge badge-sm text-secondary bg-white ms-1">30</span></a></div><div class="tab-pane" id="taxonomyCategories" role="tabpanel" aria-labelledby="taxonomyCategoriesTab" tabindex="0"><a href="/categories/%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="隨手筆記">
-                        隨手筆記<span class="badge badge-sm text-secondary bg-white ms-1">2</span></a><a href="/categories/%E5%BF%83%E5%BE%97/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="心得">
-                        心得<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a></div><div class="tab-pane" id="taxonomyTags" role="tabpanel" aria-labelledby="taxonomyTagsTab" tabindex="0"><a href="/tags/2019-it-%E9%82%A6%E5%B9%AB%E5%BF%99%E9%90%B5%E4%BA%BA%E8%B3%BD/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="2019 iT 邦幫忙鐵人賽">
-                        2019 iT 邦幫忙鐵人賽<span class="badge badge-sm text-secondary bg-white ms-1">30</span></a><a href="/tags/%E7%94%A8js%E6%88%90%E7%82%BA%E8%80%81%E9%97%86%E5%BF%83%E4%B8%AD%E7%9A%84%E5%85%A8%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="用js成為老闆心中的全端工程師">
-                        用js成為老闆心中的全端工程師<span class="badge badge-sm text-secondary bg-white ms-1">30</span></a><a href="/tags/alphacamp/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="AlphaCamp">
-                        AlphaCamp<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="/tags/kafka/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="Kafka">
-                        Kafka<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="/tags/mongodb/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="MongoDB">
-                        MongoDB<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="/tags/pandas/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="pandas">
-                        pandas<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="/tags/python/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="python">
-                        python<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="/tags/%E6%8E%A8%E8%96%A6%E7%B3%BB%E7%B5%B1/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="推薦系統">
+        <div class="tab-content mt-3"><div class="tab-pane active" id="taxonomySeries" role="tabpanel" aria-labelledby="taxonomySeriesTab" tabindex="0"><a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="用js成為老闆心中的全端工程師 - 2019 iT邦幫忙鐵人賽">
+                        用js成為老闆心中的全端工程師 - 2019 iT邦幫忙鐵人賽<span class="badge badge-sm text-secondary bg-white ms-1">30</span></a></div><div class="tab-pane" id="taxonomyCategories" role="tabpanel" aria-labelledby="taxonomyCategoriesTab" tabindex="0"><a href="https://eugenechen0514.github.io/blog/categories/%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="隨手筆記">
+                        隨手筆記<span class="badge badge-sm text-secondary bg-white ms-1">2</span></a><a href="https://eugenechen0514.github.io/blog/categories/%E5%BF%83%E5%BE%97/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="心得">
+                        心得<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a></div><div class="tab-pane" id="taxonomyTags" role="tabpanel" aria-labelledby="taxonomyTagsTab" tabindex="0"><a href="https://eugenechen0514.github.io/blog/tags/2019-it-%E9%82%A6%E5%B9%AB%E5%BF%99%E9%90%B5%E4%BA%BA%E8%B3%BD/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="2019 iT 邦幫忙鐵人賽">
+                        2019 iT 邦幫忙鐵人賽<span class="badge badge-sm text-secondary bg-white ms-1">30</span></a><a href="https://eugenechen0514.github.io/blog/tags/%E7%94%A8js%E6%88%90%E7%82%BA%E8%80%81%E9%97%86%E5%BF%83%E4%B8%AD%E7%9A%84%E5%85%A8%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="用js成為老闆心中的全端工程師">
+                        用js成為老闆心中的全端工程師<span class="badge badge-sm text-secondary bg-white ms-1">30</span></a><a href="https://eugenechen0514.github.io/blog/tags/alphacamp/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="AlphaCamp">
+                        AlphaCamp<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="https://eugenechen0514.github.io/blog/tags/kafka/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="Kafka">
+                        Kafka<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="https://eugenechen0514.github.io/blog/tags/mongodb/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="MongoDB">
+                        MongoDB<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="https://eugenechen0514.github.io/blog/tags/pandas/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="pandas">
+                        pandas<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="https://eugenechen0514.github.io/blog/tags/python/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="python">
+                        python<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a><a href="https://eugenechen0514.github.io/blog/tags/%E6%8E%A8%E8%96%A6%E7%B3%BB%E7%B5%B1/" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="推薦系統">
                         推薦系統<span class="badge badge-sm text-secondary bg-white ms-1">1</span></a></div><div class="tab-pane" id="taxonomyArchive" role="tabpanel" aria-labelledby="taxonomyArchiveTab" tabindex="0"><a href="" class="btn btn-sm btn-secondary post-taxonomy me-2 mb-2" title="2022">
     2022 <span class="badge badge-sm text-secondary bg-white ms-1">1</span>
     </a>
@@ -680,19 +680,19 @@ npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener norefe
   </div>
   <div class="card-body">
     <ul class="post-list list-unstyled ms-1"><li class="mb-2">
-        <a href="/posts/reviews/2022-02-06-alphacamp%E6%8E%A8%E8%96%A6%E7%B3%BB%E7%B5%B1%E4%B8%8A%E8%AA%B2%E5%BF%83%E5%BE%97/">AlphaCamp 推薦系統上課心得
+        <a href="https://eugenechen0514.github.io/blog/posts/reviews/2022-02-06-alphacamp%E6%8E%A8%E8%96%A6%E7%B3%BB%E7%B5%B1%E4%B8%8A%E8%AA%B2%E5%BF%83%E5%BE%97/">AlphaCamp 推薦系統上課心得
 </a>
       </li><li class="mb-2">
-        <a href="/posts/notes/2021-08-22-%E4%B8%80%E7%AA%BAkafka%E5%85%A7%E9%83%A8%E5%84%B2%E5%AD%98%E8%B3%87%E6%96%99/">一窺 Kafka 內部儲存資料
+        <a href="https://eugenechen0514.github.io/blog/posts/notes/2021-08-22-%E4%B8%80%E7%AA%BAkafka%E5%85%A7%E9%83%A8%E5%84%B2%E5%AD%98%E8%B3%87%E6%96%99/">一窺 Kafka 內部儲存資料
 </a>
       </li><li class="mb-2">
-        <a href="/posts/notes/2021-08-01-mongodb-5-%E4%BE%86%E4%BA%86%E6%9C%89%E4%BB%80%E9%BA%BC%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84%E6%9B%B4%E6%96%B0/">MongoDb 5 來了，有什麼值得注意的更新呢?
+        <a href="https://eugenechen0514.github.io/blog/posts/notes/2021-08-01-mongodb-5-%E4%BE%86%E4%BA%86%E6%9C%89%E4%BB%80%E9%BA%BC%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84%E6%9B%B4%E6%96%B0/">MongoDb 5 來了，有什麼值得注意的更新呢?
 </a>
       </li><li class="mb-2">
-        <a href="/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/">Day 30- 三周目 - Docker Network 暨完賽回顧
+        <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-30-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-network-%E6%9A%A8%E5%AE%8C%E8%B3%BD%E5%9B%9E%E9%A1%A7/">Day 30- 三周目 - Docker Network 暨完賽回顧
 </a>
       </li><li class="mb-2">
-        <a href="/series/2019-ithome-ironman/day-29-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-compose%E4%B8%80%E6%AC%A1%E7%AE%A1%E7%90%86%E5%A4%9A%E5%80%8B%E5%AE%B9%E5%99%A8/">Day 29- 三周目 - Docker Compose：一次管理多個容器
+        <a href="https://eugenechen0514.github.io/blog/series/2019-ithome-ironman/day-29-%E4%B8%89%E5%91%A8%E7%9B%AE-docker-compose%E4%B8%80%E6%AC%A1%E7%AE%A1%E7%90%86%E5%A4%9A%E5%80%8B%E5%AE%B9%E5%99%A8/">Day 29- 三周目 - Docker Compose：一次管理多個容器
 </a>
       </li></ul>
   </div>
@@ -712,11 +712,11 @@ npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener norefe
   </div>
   <div class="offcanvas-body mt-2"><div class="social-share mb-4 d-flex overflow-auto">
       <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Twitter Share Button"
-      target="_blank" href="https://twitter.com/intent/tweet?title=Day%203%20-%20%e4%b8%80%e5%91%a8%e7%9b%ae-%20%e5%bb%ba%e7%ab%8b%e7%ac%ac%e4%b8%80%e5%80%8bNode.js%20%e5%b0%88%e6%a1%88&url=%2fseries%2f2019-ithome-ironman%2fday-3-%25E4%25B8%2580%25E5%2591%25A8%25E7%259B%25AE-%25E5%25BB%25BA%25E7%25AB%258B-%25E7%25AC%25AC%25E4%25B8%2580%25E5%2580%258Bnode.js-%25E5%25B0%2588%25E6%25A1%2588%2f">
+      target="_blank" href="https://twitter.com/intent/tweet?title=Day%203%20-%20%e4%b8%80%e5%91%a8%e7%9b%ae-%20%e5%bb%ba%e7%ab%8b%e7%ac%ac%e4%b8%80%e5%80%8bNode.js%20%e5%b0%88%e6%a1%88&url=https%3a%2f%2feugenechen0514.github.io%2fblog%2fseries%2f2019-ithome-ironman%2fday-3-%25E4%25B8%2580%25E5%2591%25A8%25E7%259B%25AE-%25E5%25BB%25BA%25E7%25AB%258B-%25E7%25AC%25AC%25E4%25B8%2580%25E5%2580%258Bnode.js-%25E5%25B0%2588%25E6%25A1%2588%2f">
         <i class="fab fa-2x fa-fw fa-twitter mb-2"></i> Twitter
       </a>
       <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Facebook Share Button"
-        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fseries%2f2019-ithome-ironman%2fday-3-%25E4%25B8%2580%25E5%2591%25A8%25E7%259B%25AE-%25E5%25BB%25BA%25E7%25AB%258B-%25E7%25AC%25AC%25E4%25B8%2580%25E5%2580%258Bnode.js-%25E5%25B0%2588%25E6%25A1%2588%2f">
+        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2feugenechen0514.github.io%2fblog%2fseries%2f2019-ithome-ironman%2fday-3-%25E4%25B8%2580%25E5%2591%25A8%25E7%259B%25AE-%25E5%25BB%25BA%25E7%25AB%258B-%25E7%25AC%25AC%25E4%25B8%2580%25E5%2580%258Bnode.js-%25E5%25B0%2588%25E6%25A1%2588%2f">
         <i class="fab fa-2x fa-fw fa-facebook-f mb-2"></i> Facebook
       </a>
     </div>
@@ -736,7 +736,7 @@ npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener norefe
       <i class="fas fa-fw fa-2x fa-envelope"></i></a><a class="nav-link social-link" target="_blank" href="https://github.com/eugenechen0514" title="GitHub" rel="noopener noreferrer">
         <i class="fa-fw fa-2x fab fa-github"></i></a><a class="nav-link social-link" target="_blank" href="https://linkedin.com/in/yuchieh-chen-37a48989" title="LinkedIn" rel="noopener noreferrer">
         <i class="fa-fw fa-2x fab fa-linkedin-in"></i></a><a class="nav-link social-link" target="_blank" href="https://medium.com/@yujiechen0514" title="Medium" rel="noopener noreferrer">
-        <i class="fab fa-fw fa-2x fa-medium-m"></i></a><a class="nav-link social-link" target="_blank" href="/index.xml" title="RSS" rel="noopener noreferrer">
+        <i class="fab fa-fw fa-2x fa-medium-m"></i></a><a class="nav-link social-link" target="_blank" href="https://eugenechen0514.github.io/blog/index.xml" title="RSS" rel="noopener noreferrer">
     <i class="fas fa-fw fa-2x fa-rss"></i></a></nav>
 <div class="copyright mb-2">
   Copyright © 2016-2023 EugeneChen. All Rights Reserved.
@@ -753,18 +753,18 @@ npm 會從 <a href="https://www.npmjs.com/" target="_blank" rel="noopener norefe
 
 </div>
 </footer>
-<script src="/assets/main/bundle.min.2bc7d6952dbf38d6d2815939c58fc655e72d050b196d9fd99829d8fb23904646.js" integrity="sha256-K8fWlS2/ONbSgVk5xY/GVectBQsZbZ/ZmCnY&#43;yOQRkY=" crossorigin="anonymous" defer></script><script src="/assets/icons/bundle.min.a4bf8247f780c9bf61d579a8efe7129ec790bb98622bf4a29895eb21e689266c.js" integrity="sha256-pL&#43;CR/eAyb9h1Xmo7&#43;cSnseQu5hiK/SimJXrIeaJJmw=" crossorigin="anonymous" defer></script>
+<script src="https://eugenechen0514.github.io/blog/assets/main/bundle.min.3eea8171736259ef18da123146148c0d95740c115fc00a673d7b9320ed6ec49a.js" integrity="sha256-PuqBcXNiWe8Y2hIxRhSMDZV0DBFfwApnPXuTIO1uxJo=" crossorigin="anonymous" defer></script><script src="https://eugenechen0514.github.io/blog/assets/icons/bundle.min.a4bf8247f780c9bf61d579a8efe7129ec790bb98622bf4a29895eb21e689266c.js" integrity="sha256-pL&#43;CR/eAyb9h1Xmo7&#43;cSnseQu5hiK/SimJXrIeaJJmw=" crossorigin="anonymous" defer></script>
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('\/service-worker.min.js').then(function(reg) {
+    navigator.serviceWorker.register('https:\/\/eugenechen0514.github.io\/blog\/service-worker.min.js').then(function(reg) {
       console.log('Successfully registered service worker', reg);
     }).catch(function(err) {
       console.warn('Error whilst registering service worker', err);
     });
   });
 }
-</script><script src="/assets/viewer/bundle.min.92d4a694e2e9a4c4d89b6998067e2f8e502dc7a951682bb5a160a3004b434908.js" integrity="sha256-ktSmlOLppMTYm2mYBn4vjlAtx6lRaCu1oWCjAEtDSQg=" crossorigin="anonymous" defer></script>
+</script><script src="https://eugenechen0514.github.io/blog/assets/viewer/bundle.min.92d4a694e2e9a4c4d89b6998067e2f8e502dc7a951682bb5a160a3004b434908.js" integrity="sha256-ktSmlOLppMTYm2mYBn4vjlAtx6lRaCu1oWCjAEtDSQg=" crossorigin="anonymous" defer></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -776,5 +776,5 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-<script src="/assets/docsearch/bundle.min.c6965b5bee044b874617239932d6a7992b217f7949f895a7576980d110fb2ab1.js" integrity="sha256-xpZbW&#43;4ES4dGFyOZMtanmSshf3lJ&#43;JWnV2mA0RD7KrE=" crossorigin="anonymous" defer></script></body>
+<script src="https://eugenechen0514.github.io/blog/assets/docsearch/bundle.min.c6965b5bee044b874617239932d6a7992b217f7949f895a7576980d110fb2ab1.js" integrity="sha256-xpZbW&#43;4ES4dGFyOZMtanmSshf3lJ&#43;JWnV2mA0RD7KrE=" crossorigin="anonymous" defer></script></body>
 </html>
